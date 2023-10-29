@@ -1,0 +1,14 @@
+div
+{
+    height: 300px;
+	width: 400px;
+	border: 5px solid #C00;
+	margin: 20px;
+	padding: 20px;
+}
+
+div
+{
+    background: url(images/f01.png) left bottom repeat-x, url(images/f02.png) left bottom no-repeat, url(images/f03.png) left top repeat-x;
+	background-color: #a4d3ff;
+}

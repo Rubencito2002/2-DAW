@@ -1,0 +1,20 @@
+Mozilla anuncia la expansión global de Firefox OS
+
+Dieciocho grandes operadoras reciben la iniciativa de dispositivos Open Web y anuncian los primeros mercados donde se lanzarán los primeros dispositivos serán de Alcatel One Touch, LG y ZTE, a los cuales seguirá Huawei. La primera ola de dispositivos Firefox OS estará disponible para los consumidores de Brasil, Colombia, Hungría, México, Montenegro, Polonia, Serbia, España y Venezuela. Próximamente se anunciarán nuevos mercados.
+
+BARCELONA, España– Mobile World Congress –24 de febrero de 2013, 18:05 PM- Mozilla ha presentado hoy la primera versión comercial de su ecosistema móvil abierto Firefox OS y ha anunciado los planes de lanzamiento por parte de otras operadoras, durante una conferencia de prensa previa al inicio del Mobile World Congress en Barcelona.
+
+Hasta la fecha, 17 importantes operadoras de todo el mundo se han comprometido con la iniciativa de dispositivos Open Web: América Móvil, China Unicom, Deutsche Telekom, Etisalat, Hutchison Three Group, KDDI, KT, MegaFon, Qtel, SingTel, Smart, Sprint, Telecom Italia Group, Telefónica, Telenor, TMN y VimpelCom. Telstra ha acogido la iniciativa de Mozilla como una oportunidad de ofrecer a sus clientes una innovadora experiencia de Web móvil. El amplio número de operadoras que respaldan el sistema operativo de Mozilla, Firefox OS, demuestra el sólido apoyo del sector hacia una plataforma móvil sin restricciones y completamente flexible.
+
+El teléfono Geeksphone es muy ligero, bastante más que el Galaxy S3, manteniendo una pantalla muy similar, le acompaña una batería de 1800 * 10-3 Ah que me ha dado una autonomía de más de dos días continuamente encendido, sin datos móviles pero usando Wifi.
+
+Los smartphones Firefox OS son los primeros que están desarrollados en su totalidad de acuerdo con los estándares Web abiertos, permitiendo que cada función pueda ser desarrollada como una aplicación HTML5. Las aplicaciones Web tienen acceso a cualquier habilidad subyacente del dispositivo, evitando de este modo los típicos obstáculos del HTML5 en dispositivos móviles para ofrecer así un rendimiento notable. La flexibilidad de la plataforma permite a las operadoras diseñar fácilmente la interfaz, así como desarrollar servicios locales que respondan a las necesidades particulares de su base de clientes.
+
+Los consumidores disfrutarán de una experiencia smartphone dinámica, rica y abierta, que proporciona fácil acceso a todo lo que les gusta de la Web, incluyendo la integración de Facebook y Twitter, a través de una interfaz sencilla y rápida, y de controles de costes integrados.
+
+“Firefox OS ofrece la libertad e innovación ilimitada de la Web abierta a los usuarios móviles de cualquier parte del mundo”, según indica Gary Kovacs, CEO de Mozilla. “Con el apoyo de nuestra dinámica comunidad y de nuestros partners, nuestro objetivo es facilitar el camino para dar paso a una explosión de contenidos y servicios que solucionen las diversas necesidades de los próximos 2.000 millones de usuarios online”.
+
+11 June 2013, 10:05
+
+Your needs change from one moment to the next. That’s why Firefox OS does the same. It gives you the power to live every moment to its fullest and participate in a better world.
+
