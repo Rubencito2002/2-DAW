@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 47</title>
+</head>
+<body>
+    <h2>Ejercicio 47</h2>
+    <form name="frmHoras">
+        <h3>Hora 1: (hh:mm)</h3>
+        <input type="number" name="h1" min="0" max="23">
+        <label>:</label>
+        <input type="number" name="m1" min="0" max="59">
+        <h3>Hora 2: (hh:mm)</h3>
+        <input type="number" name="h2" min="0" max="23">
+        <label>:</label>
+        <input type="number" name="m2" min="0" max="59">
+    </form><br><br>
+    <button onclick="diferenciaHoras()">Diferencia horas</button><br><br>
+    <div id="salida"></div>
+    <script src="./ej47.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 49</title>
+</head>
+<body>
+    <h2>Ejercicio 49</h2>
+    <form name="frmFecha">
+        <h3>Fecha (dd/mm/aaaa):</h3>
+        <input type="number" name="dia" min="1" max="31">
+        <label>/</label>
+        <input type="number" name="mes" min="1" max="12">
+        <label>/</label>
+        <input type="number" name="anyo">     
+    </form><br>
+    <button onclick="calcularDiaSiguiente()">Día siguiente</button><br><br>
+    <div id="salida"></div>
+    <script src="./ej49.js"></script>
+</body>
+</html>
