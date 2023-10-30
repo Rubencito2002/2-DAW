@@ -12,19 +12,21 @@ function actualizarCronometro() {
     const horas = Math.floor(tiempo / 3600);
     const minutos = Math.floor((tiempo % 3600) / 60);
     const segundos = tiempo % 60;
-    cronometro.innerHTML = `${String(horas).padStart(2, "0")}:${String(minutos).padStart(2, "0")}:${String(segundos).padStart(2, "0")}`;
+    document.getElementById("cronometro").innerHTML = `${String(horas).padStart(2, "0")}:${String(minutos).padStart(2, "0")}:${String(segundos).padStart(2, "0")}`;
 }
 
-function iniciarDetenerCronometro() {
-    if (corriendo) 
+function iniciarDetenerCronometro() 
+{
+    if(corriendo) 
     {
         clearInterval(intervalo);
+        corriendo = false;
     } 
     else 
     {
-        intervalo = setInterval(actualizarCronometro, 1000);
+        intervalo = setInterval(actualizarCronometro, 100);
+        corriendo = true;
     }
-    corriendo = !corriendo;
 }
 
 function reiniciarCronometro() 
