@@ -5,18 +5,18 @@
 //Una propuesta de nombre usuario de la siguiente forma: inicial del nombre, primeras tres letras del apellido1 y primeras tres letras del apellido2. Ejemplo: Juan Martín López  → jmarlop
 function mostrarNombre()
 {
-    const fullName = document.getElementById("nombre").value;
-    const nameParts = fullName.split(" ");
+    const nombreCompleto = String (frmName.nombre.value);
+    const nameParts = nombreCompleto.split(" ");
     const name = nameParts[0];
     const apellido1 = nameParts[1];
     const apellido2 = nameParts[2];
 
     // Tamaño del nombre más los apellidos sin contar los espacios
-    const tamanioSinEspacios = fullName.replace(/ /g, "").length;
+    const tamanioSinEspacios = nombreCompleto.replace(/ /g, "").length;
 
     // Cadena completa en minúsculas y mayúsculas
-    const fullNameLower = fullName.toLowerCase();
-    const fullNameUpper = fullName.toUpperCase();
+    const fullNameLower = nombreCompleto.toLowerCase();
+    const fullNameUpper = nombreCompleto.toUpperCase();
 
     // Propuesta de nombre de usuario
     const nombreUsuario = name.charAt(0).toLowerCase() + apellido1.slice(0, 3).toLowerCase() + apellido2.slice(0, 3).toLowerCase();
