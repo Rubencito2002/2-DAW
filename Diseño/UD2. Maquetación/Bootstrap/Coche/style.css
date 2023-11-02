@@ -1,0 +1,17 @@
+#fondo
+{
+    background-image: url("./img/banner.png");
+    width: auto;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: contain;
+    align-items: center;
+}
+
+#icono
+{
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    background-color: yellow;
+}
