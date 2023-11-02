@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+</head>
+<body>
+    <form id="frmNum">
+        <label for="fullName">Num1:</label>
+        <input type="number" id="num1">
+        <br>
+        <label for="fullName">Num2:</label>
+        <input type="number" id="num2">
+        <br>
+        <label for="fullName">Num3:</label>
+        <input type="number" id="num3">
+        <br>
+        <label for="fullName">Num4:</label>
+        <input type="number" id="num4">
+    </form>>
+    <br>
+    <button onclick="mostrarResultado()">Enviar</button><br><br>
+    <h2>Resultados:</h2>
+    <p id="res"></p>
+
+    <script>
+        function mostrarResultado()
+        {
+            let num1 = Number (frmNum.num1.value);
+            let num2 = Number (frmNum.num2.value);
+            let num3 = Number (frmNum.num3.value);
+            let num4 = Number (frmNum.num4.value);
+
+            // Calcular la suma de los dos primeros números
+            let suma = num1 + num2;
+
+            // Calcular el producto del tercer y cuarto número
+            let producto = num3 * num4;
+
+            // Mostrar los resultados por consola
+            console.log("La suma de los dos primeros números es: " + suma);
+            console.log("El producto del tercer y cuarto número es: " + producto);
+            document.getElementById("res").innerHTML = "La suma de los dos primeros números es: " + suma + "<br>El producto del tercer y cuarto número es: " + producto;
+        }
+    </script>
+</body>
+</html>

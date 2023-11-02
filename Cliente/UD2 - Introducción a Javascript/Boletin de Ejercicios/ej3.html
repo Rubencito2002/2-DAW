@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    <script>
+        // Solicitar al usuario que introduzca su nombre y edad utilizando el método input()
+        let nombre = prompt("Introduce tu nombre:");
+        let edad = prompt("Introduce tu edad:");
+
+        // Crear un formulario con dos entradas de texto y un botón
+        const form = document.createElement("form");
+        const inputNombre = document.createElement("input");
+        const inputEdad = document.createElement("input");
+        const boton = document.createElement("button");
+
+        inputNombre.type = "text";
+        inputNombre.placeholder = "Introduce tu nombre";
+        inputEdad.type = "text";
+        inputEdad.placeholder = "Introduce tu edad";
+        boton.textContent = "Enviar";
+
+        form.appendChild(inputNombre);
+        form.appendChild(inputEdad);
+        form.appendChild(boton);
+
+        document.body.appendChild(form);
+
+        // Agregar un evento al botón para mostrar el nombre y la edad introducidos por el usuario
+        boton.addEventListener("click", function(event) {
+            event.preventDefault();
+            console.log("Nombre: " + inputNombre.value);
+            console.log("Edad: " + inputEdad.value);
+        });
+    </script>
+</body>
+</html>

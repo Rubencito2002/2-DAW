@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7</title>
+</head>
+<body>
+    <h1>Calculadora de Compra</h1>
+    <form>
+        <label for="precio">Precio del artículo:</label>
+        <input type="number" id="precio" name="precio"><br><br>
+        <label for="unidades">Unidades:</label>
+        <input type="number" id="unidades" name="unidades"><br><br>
+        <input type="button" value="Calcular" onclick="calcularTotal()">
+    </form>
+    <p id="total"></p>
+
+    <script>
+        function calcularTotal() {
+            var precio = document.getElementById("precio").value;
+            var unidades = document.getElementById("unidades").value;
+            var total = precio * unidades;
+            document.getElementById("total").innerHTML = "Total a pagar: " + total + " euros";
+        }
+    </script>
+</body>
+</html>
