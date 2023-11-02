@@ -1,3 +1,4 @@
+//Hacer un programa que sirva para resolver ecuaciones de segundo grado del tipo ax2+bx+c = 0.
 function procesarEcuacion()
 {
     // Define the coefficients of the quadratic equation

@@ -1,3 +1,4 @@
+//Crear un script que devuelva la suma de todos los elementos numéricos de un array y devuelva también el número de elementos no numéricos.
 const primerArrays = [1, 2, "3", "four", 5, "six"];
 
 let total = 0;

@@ -1,4 +1,4 @@
-
+//Crear un script que muestre mediante un mensaje la fecha actual (día, mes en letra y año), la hora actual (hora y minutos), el día de la semana (en letra) o los tres anteriores a la vez, según elija el usuario.
 function mostrarFecha() 
 {
     const fecha = new Date();

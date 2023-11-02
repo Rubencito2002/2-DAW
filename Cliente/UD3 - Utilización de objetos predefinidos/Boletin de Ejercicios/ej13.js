@@ -1,3 +1,4 @@
+//Elaborar un script que reciba un array con valores numéricos y devuelva otro array que contenga ordenados por un lado los números impares y por otro lado los pares. Si el número de elementos es impar, primero irán los impares ordenados y luego los pares ordenados; si el número es par, al contrario.
 function ordenarImparesPares(array) 
 {
     const impares = [];

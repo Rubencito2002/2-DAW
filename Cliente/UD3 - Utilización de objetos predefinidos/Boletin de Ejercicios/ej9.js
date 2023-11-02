@@ -1,3 +1,4 @@
+//Crear un script que reciba dos fechas y diga cuál es anterior y el tiempo transcurrido entre ellas (en años, meses y días).
 function procesarFecha()
 {
     const fecha1 = frmFecha.fecha1.value;

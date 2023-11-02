@@ -1,3 +1,4 @@
+//Realiza un programa que pasados 20 segundos, nos muestre una sola vez la fecha actual del sistema.
 setTimeout(function() 
 {
     var fechaActual = new Date();

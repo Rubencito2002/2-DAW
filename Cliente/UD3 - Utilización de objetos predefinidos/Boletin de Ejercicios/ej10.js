@@ -1,3 +1,4 @@
+//Realiza un programa que nos pregunte nuestro nombre y a continuación pregunta nuestra fecha de nacimiento. El programa da como resultado nuestro nombre y a continuación los días que hemos vivido hasta el momento (deberás modificar el realizado para calcular distancia entre fechas).
 const nombre = frmFechaNac.nombreCompleto.value;
 const fechaNac = frmFechaNacl.fechaNac.value;
 
