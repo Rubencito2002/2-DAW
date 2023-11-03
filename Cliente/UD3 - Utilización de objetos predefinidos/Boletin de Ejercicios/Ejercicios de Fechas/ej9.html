@@ -7,15 +7,15 @@
 </head>
 <body>
     <form id="frmFecha">
-        <label for="fullName">Fecha 1:</label>
-        <input type="text" id="fecha1">
+        <label>Fecha 1: </label>
+        <input type="date" name="fecha1" />
         <br>
-        <label for="fullName">Fecha 2:</label>
-        <input type="text" id="fecha2">
+        <label>Fecha 2: </label>
+        <input type="date" name="fecha2" />
+        <br><br>
+        <input type="button" value="Procesar fechas" onclick="procesarFechas()" />
     </form>
-    <br>
-    <button onclick="procesarFecha()">Enviar</button><br><br>
-    <h2>Resultados:</h2>
+    <br><br>
     <p id="res"></p>
     <script src="./ej9.js"></script>
 </body>
