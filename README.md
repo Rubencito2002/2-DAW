@@ -13,7 +13,7 @@
 ## Diseño Interface Web
 ### UD1. Planificación de Interface Grafica
 ### UD2. Maquetación
-https://dev.to/codeply/bootstrap-5-sidebar-examples-38pb
+
 ## Hora Libre Configuración
 ### UD1. HTML
 ### UD2. CSS
