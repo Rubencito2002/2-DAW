@@ -16,7 +16,20 @@ a
 
 .inicio
 {
-    background-image: url(../img/hero-bg.jpeg);
+    position: relative;
+}
+
+.overlay
+{
+    position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        /* Fondo semitransparente */
+        color: white;
+        padding: 20px;
+        border-radius: 5px;
 }
 
 h1, h2, h3, h4, h5, h6
