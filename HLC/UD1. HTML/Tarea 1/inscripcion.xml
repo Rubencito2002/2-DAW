@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE inscripcion">
+<inscripcion>
+    <concurso>
+        <codConcurso></codConcurso>
+        <nombreConcurso></nombreConcurso>
+        <lugar></lugar>
+        <fechaInicio></fechaInicio>
+        <fechaFin></fechaFin>
+    </concurso>
+    <concursante>
+        <nombre></nombre>
+        <telefono></telefono>
+        <codCriador></codCriador>
+        <tipo_catalogo></tipo_catalogo>
+        <abonar_catalogo></abonar_catalogo>
+        <muestre_tlf></muestre_tlf>
+        <asociacion>
+            <codAsoc></codAsoc>
+            <razon_social></razon_social>
+            <telefonoAsoc></telefonoAsoc>
+            <fax></fax>
+        </asociacion>
+    </concursante>
+</inscripcion>

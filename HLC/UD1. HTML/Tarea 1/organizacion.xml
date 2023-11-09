@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE organizacion">
+<organizacion>
+    <nombre>Campeonato Ornitológico de Andalucía (FOA)</nombre>
+    <edicion>19</edicion>
+    <celebracion>
+        <lugar>Club Deportivo Hípica Botafuegos, Algeciras (Cádiz)</lugar>
+        <aforo>15.000</aforo>
+        <fechaInicio>16 noviembre</fechaInicio>
+        <fechaFin>16 noviembre</fechaFin>
+        <diasReservas>
+            <dia>7 noviembre</dia>
+            <dia>8 noviembre</dia>
+            <dia>10 noviembre</dia>
+            <dia>11 noviembre</dia>
+            <dia>12 noviembre</dia>
+            <dia> 13 noviembre</dia>
+        </diasReservas>
+    </celebracion>
+    <componentes>
+        <componente>
+            <nombre>Miguel Ángel López Rodríguez</nombre>
+            <telefono>666777888</telefono>
+            <lugar_nacimiento>Madrid (España)</lugar_nacimiento>
+            <fecha_nacimiento>14-06-1965</fecha_nacimiento>
+            <ubicacion>
+                <direccion>Calle Argentina, 1</direccion>
+                <provincia>Madrid</provincia>
+                <pais>España</pais>
+                <codigoPostal>28086</codigoPostal>
+            </ubicacion>
+            <asociacion>
+                <nombreAsoc>Asociación Ornitológica</nombreAsoc>
+                <ubicado>Madrid</ubicado>
+                <cargo>Presidente</cargo>
+                <email>presidente@foa.es</email>
+            </asociacion>
+            <asociacion>
+                <nombreAsoc>Asociación Roquetera Ornitológica</nombreAsoc>
+                <ubicado>Madrid</ubicado>
+                <cargo>Criador</cargo>
+            </asociacion>
+            <palmares>
+                <premio>
+                    <nombre>concursante en campeonatos regionales</nombre>
+                    <medallaOro>58</medallaOro>
+                    <medallaPlata>40</medallaPlata>
+                    <medallaBronce>76</medallaBronce>
+                </premio>
+            </palmares>
+        </componente>
+        <componente>
+            <nombre>Alfredo Correa Correa</nombre>
+            <telefono>666555444</telefono>
+            <lugar_nacimiento>Granada (España)</lugar_nacimiento>
+            <fecha_nacimiento>24-06-1983</fecha_nacimiento>
+            <ubicacion>
+                <direccion>Carretera de Ronda, 106</direccion>
+                <provincia>Granada</provincia>
+                <pais>España</pais>
+                <codigoPostal>18003</codigoPostal>
+            </ubicacion>
+            <asociacion>
+                <nombreAsoc>Asociación Ornitológica</nombreAsoc>
+                <ubicado>Madrid</ubicado>
+                <cargo>Secretario</cargo>
+                <email>secretario@foa.es</email>
+            </asociacion>
+            <asociacion>
+                <nombreAsoc>Asociación Ornitológica Alhambra</nombreAsoc>
+                <ubicado>Granada</ubicado>
+                <cargo>Criador</cargo>
+            </asociacion>
+            <palmares>
+                <premio>
+                    <nombre>concursante en campeonatos regionales</nombre>
+                    <medallaOro>20</medallaOro>
+                    <medallaPlata>10</medallaPlata>
+                </premio>
+            </palmares>
+        </componente>
+        <componente>
+            <nombre>Antonio Gómez Serrano</nombre>
+            <telefono>666111222</telefono>
+            <lugar_nacimiento>Almería (España)</lugar_nacimiento>
+            <fecha_nacimiento>29-10-1979</fecha_nacimiento>
+            <ubicacion>
+                <direccion>Avenida de la Legión, s/n</direccion>
+                <localidad>Roquetas de Mar</localidad>
+                <provincia>Almería</provincia>
+                <pais>España</pais>
+                <codigoPostal>04740</codigoPostal>
+            </ubicacion>
+            <asociacion>
+                <nombreAsoc>Asociación Ornitológica</nombreAsoc>
+                <ubicado>Madrid</ubicado>
+                <cargo>Tesorero</cargo>
+                <email>tesorero@foa.es</email>
+            </asociacion>
+            <asociacion>
+                <nombreAsoc>Asociación Roquetera Ornitológica</nombreAsoc>
+                <ubicado>Madrid</ubicado>
+                <cargo>presidente</cargo>
+            </asociacion>
+        </componente>
+    </componentes>
+</organizacion>
