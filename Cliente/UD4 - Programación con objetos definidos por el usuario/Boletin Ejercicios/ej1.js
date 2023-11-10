@@ -1,3 +1,10 @@
+/* 
+Crear una función constructora de objetos Producto. Dichos productos tendrán tres atributos, uno de tipo cadena de caracteres llamado nombre, otro de tipo entero llamado unidades y otro de tipo real llamado precio. Aparte de estos tres atributos también contendría los siguientes métodos:
+valorEnStock: que no recibe parámetros y devuelve el importe total de las unidades disponibles, es decir, la multiplicación de las unidades por el precio del producto.
+incrementarStock: que recibe un entero como parámetro y aumenta el número de unidades en la cantidad indicada en el parámetro.
+disminuirStock: que recibe un entero como parámetro y disminuye el número de unidades en la cantidad indicada en el parámetro.
+Todos los métodos consultores (getter) y modificadores (setter) de los tres atributos descritos anteriormente, teniendo en cuenta que si por error se intentara modificar el atributo precio con un valor negativo, este debería guardarse automáticamente como positivo.
+*/
 class Producto{
     // Atributos
     #nombre;
