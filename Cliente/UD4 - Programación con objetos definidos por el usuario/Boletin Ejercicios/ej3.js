@@ -9,3 +9,123 @@ Ponga el atributo parpadeando a cierto.
 Llame 5 veces al método cambio (use un  bucle)
 Cree un nuevo semáforo y asigne los valores de los atributos del primer semáforo al nuevo.
 */
+class Semaforo
+{
+    // Constructor
+    constructor()
+    {
+        this.color = 0;
+        this.parpadeando = false;
+    }
+
+    // Metodos
+    getColor()
+    {
+        return this.color;
+    }
+
+    setColor(newColor)
+    {
+        if(newColor >= 0 && newColor <= 2)
+            this.color = newColor;
+        else
+            console.log("El color no es correcto");
+    }
+
+    getParpadeando()
+    {
+        return this.parpadeando;
+    }
+
+    setParpadeando(parpadeando)
+    {
+        if(this.color == 1)
+            this.parpadeando = parpadeando;
+        else
+            console.log("El semáforo no está en ámbar");
+    }
+
+    cadenaColor()
+    {
+        switch(this.color)
+        {
+            case 0:
+                return "ROJO";
+            case 1:
+                return "ÁMBAR";
+            case 2:
+                return "VERDE";
+            default:
+                return "Desconocido";
+        }
+    }
+
+    imprimir()
+    {
+        if(this.parpadeando)
+            console.log("Semáforo en " + this.cadenaColor() + " parpadeando");
+        else
+            console.log("Semáforo en " + this.cadenaColor());
+    }
+
+    cambia()
+    {
+        switch(this.color)
+        {
+            case 0:
+                this.color = 1;
+                break;
+            case 1:
+                if(this.parpadeando)
+                    this.color = 0;
+                else
+                    this.color = 2;
+                break;
+            case 2:
+                this.color = 0;
+                break;
+            default:
+                console.log("Error: Estado de semáforo desconocido");
+        }
+    }
+}
+
+// Ejemplo de uso en un entorno web
+window.onload = function () {
+  // Crear un semáforo
+    const semaforo = new Semaforo();
+
+    // Cambios en el semáforo y visualización
+    semaforo.imprimir();
+
+    // Cambiar el color a un valor incorrecto
+    semaforo.setColor(5);
+
+    // Cambiar el color a verde
+    semaforo.setColor(2);
+    semaforo.imprimir();
+
+    // Poner el atributo parpadeando a true
+    semaforo.setParpadeando(true);
+    semaforo.imprimir();
+
+    // Cambiar el color a ámbar
+    semaforo.setColor(1);
+    semaforo.imprimir();
+
+    // Poner el atributo parpadeando a true
+    semaforo.setParpadeando(true);
+    semaforo.imprimir();
+
+    // Llamar al método cambia 5 veces
+    for (let i = 0; i < 5; i++) {
+        semaforo.cambia();
+        semaforo.imprimir();
+    }
+
+    // Crear un nuevo semáforo y asignar valores del primer semáforo
+    const nuevoSemaforo = new Semaforo();
+    nuevoSemaforo.setColor(semaforo.getColor());
+    nuevoSemaforo.setParpadeando(semaforo.getParpadeando());
+    nuevoSemaforo.imprimir();
+};
