@@ -120,7 +120,7 @@ class BonoTarifaPlana extends Bonobus
     // Constructor
     constructor(dia, mes, anno)
     {
-        super;
+        super();
         this.fechaCaducidad = { dia: dia, mes: mes, anno: anno };
     }
 
