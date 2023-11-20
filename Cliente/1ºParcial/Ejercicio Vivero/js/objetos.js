@@ -140,15 +140,21 @@ class Vivero
 
     altaArbol(arbol) 
     {
-        /*let i = 0,
-            encontrado = false;
-        while (i < this.arboles.length && !encontrado) {
-            if (this.arboles[i].codigo == arbol.codigo) {
-            encontrado = true;
-            } else {
-            i++;
+        /*
+        let i = 0,
+        encontrado = false;
+        while (i < this.arboles.length && !encontrado) 
+        {
+            if (this.arboles[i].codigo == arbol.codigo) 
+            {
+                encontrado = true;
+            } 
+            else 
+            {
+                i++;
             }
-        }*/
+        }
+        */
     
         let encontrado = this.arboles.filter((elem) => elem.codigo == arbol.codigo).length == 1;
     
