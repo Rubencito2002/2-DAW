@@ -1,5 +1,0 @@
-* Arreglar menu y poner icono que falta.
-* Centrar lo del banner despues del menu.
-* Arreglar responsive de algunas partes actuales.
-* Añadir lo que falta por hacer y cambiar el footer.
-*** Crear guia de estilo.
