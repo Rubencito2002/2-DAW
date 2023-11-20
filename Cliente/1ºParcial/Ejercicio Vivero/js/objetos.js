@@ -175,12 +175,13 @@ class Vivero
             encontrado = false;
         while (i < this.arboles.length && !encontrado) 
         {
-            if (this.arboles[i].codigo == codigo) {
-            encontrado = true;
+            if (this.arboles[i].codigo == codigo) 
+            {
+                encontrado = true;
             } 
             else 
             {
-            i++;
+                i++;
             }
         }
         if (encontrado) 
