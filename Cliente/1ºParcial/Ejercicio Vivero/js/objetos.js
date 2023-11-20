@@ -3,7 +3,7 @@ class Arbol
     #codigo;
     #tallaje;
     #especie;
-
+    
     constructor(codigo, tallaje, especie) 
     {
         this.#codigo = codigo;
@@ -20,6 +20,7 @@ class Arbol
     {
         this.#codigo = codigo;
     }
+
     get tallaje() 
     {
         return this.#tallaje;
@@ -76,13 +77,12 @@ class Perenne extends Arbol
         return this.#frutal;
     }
 
-    set frutal(frutal) 
+    set frutal(frutal)
     {
         this.#frutal = frutal;
     }
 
-    toHTMLRow() 
-    {
+    toHTMLRow() {
         let fila = super.toHTMLRow();
         fila = fila.slice(0, fila.length - 5); // Para quitar el </tr>
         fila += "<td>" + (this.frutal ? "SI" : "NO") + "</td></tr>";
@@ -172,7 +172,7 @@ class Vivero
     buscarArbol(codigo) 
     {
         let i = 0,
-            encontrado = false;
+        encontrado = false;
         while (i < this.arboles.length && !encontrado) 
         {
             if (this.arboles[i].codigo == codigo) 
@@ -184,6 +184,7 @@ class Vivero
                 i++;
             }
         }
+
         if (encontrado) 
         {
             return i;
@@ -198,6 +199,7 @@ class Vivero
     {
         let mensajeSalida = "";
         let posicion = this.buscarArbol(codigo);
+
         if (posicion < 0) 
         {
             mensajeSalida += "Árbol no registrado";
@@ -223,6 +225,7 @@ class Vivero
     
         let salida = "<table border='1'>";
         salida += "<thead><tr><th>Código</th><th>Tallaje</th><th>Especie</th><th>Frutal</th></thead><tbody>";
+        
         for (let arbol of listadoPerenne) 
         {
             salida += arbol.toHTMLRow();
@@ -234,9 +237,8 @@ class Vivero
     listadoCaducos(mesFloracion) 
     {
         let listadoCaduco = this.arboles.filter((arbol) => arbol instanceof Caduco && arbol.mesFloracion == mesFloracion);
-    
         let salida = "<table border='1'>";
-        salida += "<thead><tr><th>Código</th><th>Tallaje</th><th>Especie</th><th>Mes floración</th></thead>";
+        salida +="<thead><tr><th>Código</th><th>Tallaje</th><th>Especie</th><th>Mes floración</th></thead>";
     
         for (let arbol of listadoCaduco) 
         {
