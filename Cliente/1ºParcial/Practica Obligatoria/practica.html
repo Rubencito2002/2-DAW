@@ -1,6 +1,5 @@
 ﻿<!DOCTYPE html>
 <html lang="es">
-
 <head>
     <title>Agencia</title>
     <meta charset="utf-8">
@@ -26,15 +25,20 @@
     </style>
 </head>
 <body>
-
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">Viveros Naranjito</a>
+                <a class="navbar-brand" href="#">Agencia</a>
             </div>
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="#" onclick="gestionFormularios('frmAltaArbol');">Alta de árbol</a>
+                    <a href="#" onclick="gestionFormularios('frmAltaCliente');">Alta de Cliente</a>
+                </li>
+                <li>
+                    <a href="#" onclick="gestionFormularios('frmAltaVehiculo');">Alta de Vehículo</a>
+                </li>
+                <li>
+                    <a href="#" onclick="gestionFormularios('frmAltaArbol');">Alta de Alquiler</a>
                 </li>
                 <li>
                     <a href="#" onclick="gestionFormularios('frmTallaje');">Tallaje árbol</a>
@@ -52,74 +56,44 @@
         </div>
     </nav>
     <div class="container-fluid" id="formularios">
-        <form class="form-horizontal" name="frmAltaArbol" id="frmAltaArbol">
+        <form class="form-horizontal" name="frmAltaCliente" id="frmAltaCliente">
             <fieldset>
                 <!-- Form Name -->
-                <legend>Alta de árbol</legend>
-                <!-- Text input-->
+                <legend>Alta de Cliente</legend>
+                <!-- Number input-->
                 <div class="form-group">
-                    <label class="col-xs-4 control-label" for="txtCodigo">Código</label>
+                    <label class="col-xs-4 control-label" for="txtDNI">DNI</label>
                     <div class="col-xs-4">
-                        <input id="txtCodigo" name="txtCodigo" placeholder="Codigo" class="form-control input-md" type="text">
+                        <input id="txtDNI" name="txtDNI" placeholder="Nombre" class="form-control input-md" type="number">
                     </div>
                 </div>
                 <!-- Text input-->
                 <div class="form-group">
-                    <label class="col-xs-4 control-label" for="txtTallaje">Tallaje</label>
+                    <label class="col-xs-4 control-label" for="txtNombre">Nombre</label>
                     <div class="col-xs-4">
-                        <input id="txtTallaje" name="txtTallaje" placeholder="Tallaje" class="form-control input-md" type="text">
+                        <input id="txtNombre" name="txtNombre" placeholder="Nombre" class="form-control input-md" type="text">
                     </div>
                 </div>
                 <!-- Text input-->
                 <div class="form-group">
-                    <label class="col-xs-4 control-label" for="txtEspecie">Especie</label>
+                    <label class="col-xs-4 control-label" for="txtApellidos">Apellidos</label>
                     <div class="col-xs-4">
-                        <input id="txtEspecie" name="txtEspecie" placeholder="Especie" class="form-control input-md" type="text">
-                    </div>
-                </div>
-                <!-- Multiple Radios -->
-                <div class="form-group">
-                    <label class="col-xs-4 control-label" for="rbtTipoArbol">Tipo de árbol</label>
-                    <div class="col-xs-4">
-                        <div class="radio">
-                            <input name="rbtTipoArbol" id="rbtTipoArbol-C" value="caduco" checked="checked" type="radio">
-                            <label for="rbtTipoArbol-C">Caduco</label>
-                        </div>
-                        <div class="radio">
-                            <input name="rbtTipoArbol" id="rbtTipoArbol-P" value="perenne" type="radio">
-                            <label for="rbtTipoArbol-P">Perenne</label>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Multiple Radios -->
-                <div class="form-group">
-                    <label class="col-xs-4 control-label" for="rbtFrutal">Frutal</label>
-                    <div class="col-xs-4">
-                        <div class="radio">
-                            <input name="rbtFrutal" id="rbtFrutal-S" value="S" checked="checked" type="radio">
-                            <label for="rbtFrutal-S">Sí</label>
-                        </div>
-                        <div class="radio">
-                            <input name="rbtFrutal" id="rbtFrutal-N" value="N" checked="checked" type="radio">
-                            <label for="rbtFrutal-N">No</label>
-                        </div>
+                        <input id="txtApellidos" name="txtApellidos" placeholder="Apellidos" class="form-control input-md" type="text">
                     </div>
                 </div>
                 <!-- Text input-->
                 <div class="form-group">
-                    <label class="col-xs-4 control-label" for="txtMesFloracion">Mes de floración
-                    </label>
+                    <label class="col-xs-4 control-label" for="txtUsuario">Usuario</label>
                     <div class="col-xs-4">
-                        <input id="txtMesFloracion" name="txtMesFloracion" placeholder="Mes de floración" class="form-control input-md" type="text">
+                        <input id="txtUsuario" name="txtUsuario" placeholder="Usuario" class="form-control input-md" type="text">
                     </div>
                 </div>
 
                 <!-- Input Button -->
                 <div class="form-group">
-                    <label class="col-xs-4 control-label" for="btnAceptarAltaArbol"></label>
+                    <label class="col-xs-4 control-label" for="btnAceptarAltaCliente"></label>
                     <div class="col-xs-4">
-                        <input type="button" id="btnAceptarAltaArbol" name="btnAceptarAltaArbol" class="btn btn-primary" value="Aceptar" onclick="aceptarAltaArbol();"/>
+                        <input type="button" id="btnAceptarAltaCliente" name="btnAceptarAltaCliente" class="btn btn-primary" value="Aceptar" onclick="aceptarAltaCliente();"/>
                     </div>
                 </div>
             </fieldset>
