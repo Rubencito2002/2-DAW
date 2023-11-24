@@ -1,0 +1,384 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Concesionario Hnos. Machado</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="bootstrap/js/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        body 
+        {
+            margin-left: 10px;
+        }
+        
+        form 
+        {
+            display: none;
+        }
+        
+        #formularios 
+        {
+            margin-top: 60px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Concesionario Hnos. Machado</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="#" onclick="gestionFormularios('frmAltaCliente');">Alta Cliente</a>
+                </li>
+                <li>
+                    <a href="#" onclick="gestionFormularios('frmAltaVehiculo');">Alta Vehiculo</a>
+                </li>
+                <li>
+                    <a href="#" onclick="gestionFormularios('frmAltaAlquiler');">Alta Alquiler</a>
+                </li>
+                <li>
+                    <a href="#" onclick="gestionFormularios('frmBajaAlquiler');">Baja Alquiler</a>
+                </li>
+                <li>
+                    <a href="#" onclick="gestionFormularios('frmListadoCliente');">Listado Cliente</a>
+                </li>
+                <li>
+                    <a href="#" onclick="gestionFormularios('frmListadoVehiculo');">Listado Vehiculo</a>
+                </li>
+                <li>
+                    <a href="#" onclick="gestionFormularios('frmListadoAlquilerPorFecha');">Listado de Alquiler (Fecha)</a>
+                </li>
+                <li>
+                    <a href="#" onclick="gestionFormularios('frmListadoAlquilerPorCliente');">Listado de Alquiler (Cliente)</a>
+                </li>
+                <li>
+                    <a href="#" onclick="gestionFormularios('frmListadoCochesElectrico');">Listado Coches Electricos</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid" id="formularios">
+        <form class="form-horizontal" name="frmAltaCliente" id="frmAltaCliente">
+            <fieldset>
+                <!-- Form Name -->
+                <legend>Alta de Cliente</legend>
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-xs-4 control-label" for="txtDNI">DNI</label>
+                    <div class="col-xs-4">
+                        <input id="txtDNI" name="txtDNI" placeholder="DNI" class="form-control input-md" type="text">
+                    </div>
+                </div>
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-xs-4 control-label" for="txtNombre">Nombre</label>
+                    <div class="col-xs-4">
+                        <input id="txtNombre" name="txtNombre" placeholder="Nombre" class="form-control input-md" type="text">
+                    </div>
+                </div>
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-xs-4 control-label" for="txtApellidos">Apeliidos</label>
+                    <div class="col-xs-4">
+                        <input id="txtApellidos" name="txtApellidos" placeholder="Apeliidos" class="form-control input-md" type="text">
+                    </div>
+                </div>
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-xs-4 control-label" for="txtUsuario">Usuario</label>
+                    <div class="col-xs-4">
+                        <input id="txtUsuario" name="txtUsuario" placeholder="Usuario" class="form-control input-md" type="text">
+                    </div>
+                </div>
+
+                <!-- Input Button -->
+                <div class="form-group">
+                    <label class="col-xs-4 control-label" for="btnAceptarAltaCliente"></label>
+                    <div class="col-xs-4">
+                        <input type="button" id="btnAceptarAltaCliente" name="btnAceptarAltaCliente" class="btn btn-primary" value="Aceptar" onclick="aceptarAltaCliente();"/>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <form class="form-horizontal" name="frmAltaVehiculo" id="frmAltaVehiculo">
+            <fieldset>
+
+                <!-- Form Name -->
+                <legend>Alta de Vehiculo</legend>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-xs-4 control-label" for="txtMatricula">Matricula</label>
+                    <div class="col-xs-4">
+                        <input id="txtMatricula" name="txtMatricula" placeholder="Matricula" class="form-control input-md" type="text">
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-xs-4 control-label" for="txtMarca">Marca</label>
+                    <div class="col-xs-4">
+                        <input id="txtMarca" name="txtMarca" placeholder="Marca" class="form-control input-md" type="text">
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-xs-4 control-label" for="txtModelo">Modelo</label>
+                    <div class="col-xs-4">
+                        <input id="txtModelo" name="txtModelo" placeholder="Modelo" class="form-control input-md" type="text">
+                    </div>
+                </div>
+
+                <!-- Multiple Radios -->
+                <div class="form-group">
+                    <label class="col-xs-4 control-label" for="rbtTipoVehiculo">Tipo de Vehiculo</label>
+                    <div class="col-xs-4">
+                        <div class="radio">
+                            <input name="rbtTipoVehiculo" id="rbtTipoVehiculo-C" value="moto" checked="checked" type="radio">
+                            <label for="rbtTipoVehiculo-C">Moto</label>
+                        </div>
+                        <div class="radio">
+                            <input name="rbtTipoVehiculo" id="rbtTipoVehiculo-P" value="coche" type="radio">
+                            <label for="rbtTipoVehiculo-P">Coche</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Multiple Radios -->
+                <div class="form-group">
+                    <label class="col-xs-4 control-label" for="rbtCiclomotor">Ciclomotor</label>
+                    <div class="col-xs-4">
+                        <div class="radio">
+                            <input name="rbtCiclomotor" id="rbtCiclomotor-S" value="S" checked="checked" type="radio">
+                            <label for="rbtCiclomotor-S">Sí</label>
+                        </div>
+                        <div class="radio">
+                            <input name="rbtCiclomotor" id="rbtCiclomotor-N" value="N" checked="checked" type="radio">
+                            <label for="rbtCiclomotor-N">No</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-xs-4 control-label" for="txtCombustible">Combustible</label>
+                    <div class="col-xs-4">
+                        <input id="txtCombustible" name="txtCombustible" placeholder="Combustible" class="form-control input-md" type="text">
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-xs-4 control-label" for="txtPlazas">Plazas</label>
+                    <div class="col-xs-4">
+                        <input id="txtPlazas" name="txtPlazas" placeholder="Plazas" class="form-control input-md" type="number">
+                    </div>
+                </div>
+                <!-- Input Button -->
+                <div class="form-group">
+                    <label class="col-xs-4 control-label" for="btnAceptarAltaVehiculo"></label>
+                    <div class="col-xs-4">
+                        <input type="button" id="btnAceptarVehiculo" name="btnAceptarVehiculo" class="btn btn-primary" value="Aceptar" onclick="aceptarAltaVehiculo();"/>
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
+        <form class="form-horizontal" name="frmAltaAlquiler" id="frmAltaAlquiler">
+            <fieldset>
+
+                <!-- Form Name -->
+                <legend>Alta de Alquiler</legend>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-xs-4 control-label" for="numIdAlquiler">IdAlquiler</label>
+                    <div class="col-xs-4">
+                        <input id="numIdAlquiler" name="numIdAlquiler" placeholder="IdAlquiler" class="form-control input-md" type="number">
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-xs-4 control-label" for="txtCliente">Cliente</label>
+                    <div class="col-xs-4">
+                        <input id="txtCliente" name="txtCliente" placeholder="Cliente" class="form-control input-md" type="text">
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-xs-4 control-label" for="txtVehiculo">Vehiculo</label>
+                    <div class="col-xs-4">
+                        <input id="txtVehiculo" name="txtVehiculo" placeholder="Vehiculo" class="form-control input-md" type="text">
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-xs-4 control-label" for="altaFechaInicio">Fecha Inicio</label>
+                    <div class="col-xs-4">
+                        <input id="altaFechaInicio" name="altaFechaInicio" placeholder="Fecha Inicio" class="form-control input-md" type="date">
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-xs-4 control-label" for="altaFechaFin">Fecha Fin</label>
+                    <div class="col-xs-4">
+                        <input id="altaFechaFin" name="altaFechaFin" placeholder="Plazas" class="form-control input-md" type="date">
+                    </div>
+                </div>
+
+                <!-- Input Button -->
+                <div class="form-group">
+                    <label class="col-xs-4 control-label" for="btnAceptarAltaAlquiler"></label>
+                    <div class="col-xs-4">
+                        <input type="button" id="btnAceptarAltaAlquiler" name="btnAceptarAltaAlquiler" class="btn btn-primary" value="Aceptar" onclick="aceptarAltaAlquiler();"/>
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
+        <form class="form-horizontal" name="frmBajaAlquiler" id="frmBajaAlquiler">
+            <fieldset>
+
+                <!-- Form Name -->
+                <legend>Baja de Alquiler</legend>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-xs-4 control-label" for="numIdAlquiler">IdAlquiler</label>
+                    <div class="col-xs-4">
+                        <input id="numIdAlquiler" name="numIdAlquiler" placeholder="IdAlquiler" class="form-control input-md" type="number">
+                    </div>
+                </div>
+
+                <!-- Input Button -->
+                <div class="form-group">
+                    <label class="col-xs-4 control-label" for="btnAceptarBajaAlquiler"></label>
+                    <div class="col-xs-4">
+                        <input type="button" id="btnAceptarBajaAlquiler" name="btnAceptarBajaAlquiler" class="btn btn-primary" value="Aceptar" onclick="aceptarBajaAlquiler();"/>
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
+        <form class="form-horizontal" name="frmListadoCliente" id="frmListadoCliente">
+            <fieldset>
+
+                <!-- Form Name -->
+                <legend>Listado de Cliente</legend>
+
+                <!-- Button -->
+                <div class="form-group">
+                    <label class="col-xs-4 control-label" for="btnAceptarListadoCliente"></label>
+                    <div class="col-xs-4">
+                        <input type="button" id="btnAceptarListadoCliente" name="btnAceptarListadoCliente" class="btn btn-primary" value="Aceptar" onclick="aceptarListadoCliente();"/>
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
+        <form class="form-horizontal" name="frmListadoVehiculo" id="frmListadoVehiculo">
+            <fieldset>
+
+                <!-- Form Name -->
+                <legend>Listado de Vehiculo</legend>
+
+                <!-- Input Button -->
+                <div class="form-group">
+                    <label class="col-xs-4 control-label" for="btnAceptarListadoVehiculo"></label>
+                    <div class="col-xs-4">
+                        <input type="button" id="btnAceptarListadoVehiculo" name="btnAceptarListadoVehiculo" class="btn btn-primary" value="Aceptar" onclick="aceptarListadoVehiculo();"/>
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
+        <form class="form-horizontal" name="frmListadoAlquilerPorFecha" id="frmListadoAlquilerPorFecha">
+            <fieldset>
+
+                <!-- Form Name -->
+                <legend>Listado de Vehiculo</legend>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-xs-4 control-label" for="listadoFechaInicio">Mes de Inicio</label>
+                    <div class="col-xs-4">
+                        <input id="listadoFechaInicio" name="listadoFechaInicio" placeholder="Mes de Inicio" class="form-control input-md" type="date">
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-xs-4 control-label" for="listadoFechaFin">Mes de Fin</label>
+                    <div class="col-xs-4">
+                        <input id="listadoFechaFin" name="listadoFechaFin" placeholder="Mes de Fin" class="form-control input-md" type="date">
+                    </div>
+                </div>
+
+                <!-- Input Button -->
+                <div class="form-group">
+                    <label class="col-xs-4 control-label" for="btnAceptarListadoCaduco"></label>
+                    <div class="col-xs-4">
+                        <input type="button" id="btnAceptarListadoCaduco" name="btnAceptarListadoCaduco" class="btn btn-primary" value="Aceptar" onclick="aceptarListadoCaducos();"/>
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
+        <form class="form-horizontal" name="frmListadoAlquilerPorCliente" id="frmListadoAlquilerPorCliente">
+            <fieldset>
+
+                <!-- Form Name -->
+                <legend>Listado de Vehiculo</legend>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-xs-4 control-label" for="listadoIdCliente">Id Cliente</label>
+                    <div class="col-xs-4">
+                        <input id="listadoIdCliente" name="listadoIdCliente" placeholder="Id Cliente" class="form-control input-md" type="text">
+                    </div>
+                </div>
+
+                <!-- Input Button -->
+                <div class="form-group">
+                    <label class="col-xs-4 control-label" for="btnAceptarListadoAlquilerPorCliente"></label>
+                    <div class="col-xs-4">
+                        <input type="button" id="btnAceptarListadoAlquilerPorCliente" name="btnAceptarListadoAlquilerPorCliente" class="btn btn-primary" value="Aceptar" onclick="aceptarListadoAlquilerPorCliente();"/>
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
+        <form class="form-horizontal" name="frmListadoCochesElectrico" id="frmListadoCochesElectrico">
+            <fieldset>
+
+                <!-- Form Name -->
+                <legend>Listado de Vehiculo Electricos</legend>
+
+                <!-- Input Button -->
+                <div class="form-group">
+                    <label class="col-xs-4 control-label" for="btnAceptarListadoCaduco"></label>
+                    <div class="col-xs-4">
+                        <input type="button" id="btnAceptarListadoCaduco" name="btnAceptarListadoCaduco" class="btn btn-primary" value="Aceptar" onclick="aceptarListadoCaducos();"/>
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
+    </div>
+    <script type="text/javascript" src="js/objetos.js"></script>
+    <script type="text/javascript" src="js/codigo.js"></script>
+</body>
+
+</html>
