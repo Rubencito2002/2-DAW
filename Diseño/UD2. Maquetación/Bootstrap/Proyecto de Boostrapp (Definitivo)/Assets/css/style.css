@@ -72,21 +72,120 @@ section
 }
 
 /*** Estilos de Menu ***/
-.imgMenu
-{
-    width: 100px;
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    transition: all ease-in-out 0.5s;
+    z-index: 9997;
+    transition: all 0.5s;
+    padding: 0 15px;
+    overflow-y: auto;
 }
 
-.fondoMenu
+#header .perfil img {
+    margin: 15px auto;
+    display: block;
+    width: 120px;
+    border: 8px solid #2c2f3f;
+}
+
+#header .perfil h1{
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    -moz-text-align-last: center;
+    text-align-last: center;
+}
+
+#header .perfil h1 a, #header .perfil h1 a:hover{
+    color: #fff;
+    text-decoration: none;
+}
+
+#header .fondoMenu
 {
     background-color: #050d18;
     color: #fff;
 }
 
-.iconoRedes
-{
-    background-color: #050d18;
+#header .perfil .social a{
+    font-size: 18px;
+    display: inline-block;
+    background: #212431;
+    color: #fff;
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 4px;
+    border-radius: 50%;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+}
+
+#header .perfil .social a:hover{
+    background: #149ddd;
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu-button {
+    background-color: #149ddd;
+    border: none;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    /* Tamaño del texto */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Sombra para resaltar el botón */
+    width: 40px;
+    height: 40px;
+}
+
+/**** Menu de Navegacion ****/
+.menu {
+    padding: 30px 0 0 0;
+}
+
+.menu * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu>ul>li {
+    position: relative;
+    white-space: nowrap;
+}
+
+.menu a, .menu a:focus {
+    display: flex;
     align-items: center;
+    color: #a8a9b4;
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    transition: 0.3s;
+    font-size: 15px;
+}
+
+.menu a i, .menu a:focus i {
+    font-size: 24px;
+    padding-right: 8px;
+    color: #6f7180;
+}
+
+.menu a:hover, .menu .active, .menu .active:focus, .menu li:hover>a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu a:hover i, .menu .active i, .menu .active:focus i, .menu li:hover>a i {
+    color: #149ddd;
 }
 
 /*** Estilos de Inicio ***/
@@ -609,4 +708,35 @@ iframe{
 {
     margin-bottom: 10px;
     height: 20px;
+}
+
+/*** Estilo del Boton de Volver ***/
+.botonVolver {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    right: 15px;
+    bottom: 15px;
+    z-index: 996;
+    background: #149ddd;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    transition: all 0.4s;
+}
+
+.botonVolver i {
+    font-size: 28px;
+    color: #fff;
+    line-height: 0;
+}
+
+.botonVolver:hover {
+    background: #2eafec;
+    color: #fff;
+}
+
+.botonVolver.active {
+    visibility: visible;
+    opacity: 1;
 }
