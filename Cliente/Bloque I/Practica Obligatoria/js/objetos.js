@@ -374,7 +374,7 @@ class Agencia{
 
     listadoAlquileres(fechaInicio, fechaFin)
     {
-
+        
     }
 
     listadoAlquileresCliente(cliente)
