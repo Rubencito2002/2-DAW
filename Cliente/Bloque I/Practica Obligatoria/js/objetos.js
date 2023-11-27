@@ -199,19 +199,19 @@ class Coche extends Vehiculo{
 class Alquiler {
     // Atributos de Alquilar.
     _idAlquilar;
-    _cliente;
-    _vehiculo;
     _fechaInicio;
     _fechaFin;
+    _cliente;
+    _vehiculo;
 
     // Constructor de Alquilar.
     constructor(idAlquilar, fechaInicio, fechaFin)
     {
         this._idAlquilar = idAlquilar;
-        this._cliente = Cliente;
-        this._vehiculo = [];
         this._fechaInicio = fechaInicio;
         this._fechaFin = fechaFin;
+        this._cliente = Cliente;
+        this._vehiculo = [];
     }
 
     // Getters & Setters de Alquilar.
@@ -315,16 +315,45 @@ class Agencia{
     // Metodos Extras de Agencia.
     altaCliente(cliente)
     {
-
+        let encontrado = this._cliente.includes(cliente);
+        if(!encontrado)
+        {
+            this._cliente.push(cliente);
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     altaAlquiler(alquiler)
     {
-        
+        let encontrado = this._alquilar.includes(alquiler);
+        if(!encontrado)
+        {
+            this._alquilar.push(alquiler);
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
-    altaVehiculo(vehiuclo)
+    altaVehiculo(vehiculo)
     {
+        let existeMatricula = this.vehiculo.some(v => v.matricula === vehiculo.matricula);
+        if(!existeMatricula)
+        {
+            this._vehiculo.push(vehiculo);
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+
         
     }
 

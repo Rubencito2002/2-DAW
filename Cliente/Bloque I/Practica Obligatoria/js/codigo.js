@@ -1,9 +1,7 @@
 "use strict";
 // Variables globales
-let oCliente = new Cliente();
-let oAlquiler = new Alquiler();
-let oVehiculo = new Vehiculo();
-
+let oAgencia = new Agencia();
+/*
 datosIniciales();
 
 function datosIniciales() {
@@ -18,7 +16,7 @@ function datosIniciales() {
   oVivero.altaArbol(new Perenne(9, 90, "Alcornoque", true));
   oVivero.altaArbol(new Caduco(10, 70, "Peral", "marzo"));
 }
-
+*/
 // Gestión de formularios
 function gestionFormularios(sFormularioVisible) {
   ocultarTodosLosFormularios();
@@ -66,18 +64,18 @@ function ocultarTodosLosFormularios()
 }
 
 // AceptarAltaCliente
-function AceptarAltaCliente() 
+function aceptarAltaCliente() 
 {
   let dniCliente = parseInt(frmAltaCliente.txtDNI.value.trim());
   let nombre = frmAltaCliente.txtNombre.value.trim();
-  let apellido1 = frmAltaCliente.txtApellido1.value.trim();
-  let apellido2 = frmAltaCliente.txtApellido2.value.trim();
+  let apellido1 = frmAltaCliente.txtApellidos1.value.trim();
+  let apellido2 = frmAltaCliente.txtApellidos2.value.trim();
+
   let usuario = generarUsuario(dniCliente, nombre, apellido1, apellido2);
   let apellidos = apellido1 + apellido2;
   let oCliente = new Cliente(dniCliente, nombre, apellidos, usuario);
 
-  // Insertar el nuevo árbol
-  if (oCliente.altaCliente(oCliente)) 
+  if (oAgencia.altaCliente(oCliente)) 
   {
     alert("Cliente registrado OK");
     frmAltaCliente.reset();
@@ -94,19 +92,72 @@ function generarUsuario(dniCliente, nombre, apellido1, apellido2)
   const inicialNombre = nombre.charAt(0).toLowerCase();
   const tresLetrasApellido1 = apellido1.slice(0, 3).toLowerCase();
   const tresLetrasApellido2 = apellido2.slice(0, 3).toLowerCase();
-  const tresUltimosDigitosDNI = dniCliente.slice(-3);
+  const tresUltimosDigitosDNI = String(dniCliente).slice(-3);
 
   return inicialNombre + tresLetrasApellido1 + tresLetrasApellido2 + tresUltimosDigitosDNI;
 }
 
 function aceptarAltaVehiculo() 
 {
+  let matricula = frmAltaVehiculo.txtMatricula.value.trim();
+  let marca = frmAltaVehiculo.txtMarca.value.trim();
+  let modelo = frmAltaVehiculo.txtModelo.value.trim();
+  let tipoVehiculo = frmAltaVehiculo.rbtTipoVehiculo.value;
+  let ciclomotor;
+  let combustible = frmAltaVehiculo.txtCombustible.value.trim();
+  let plaza = parseInt(frmAltaVehiculo.intPlazas.value.trim());
+  let oVehiculo;
 
+  if(tipoVehiculo === "Moto")
+  {
+    if(frmAltaVehiculo.value === True)
+    {
+      ciclomotor = True;
+      oVehiculo = new Moto(matricula, marca, modelo, ciclomotor);
+    }
+    else
+    {
+      ciclomotor = False;
+      oVehiculo = new Moto(matricula, marca, modelo, ciclomotor);
+    }
+  }
+  else
+  {
+    oVehiculo = new Coche(matricula, marca, modelo, combustible, plaza);
+  }
+
+  if (oAgencia.altaVehiculo(oVehiculo)) 
+  {
+    alert("Vehiculo registrado OK");
+  } 
+  else 
+  {
+    alert("Vehiculo con matricula: "+ matricula + " está registrado previamente");
+  }
+
+  frmAltaVehiculo.reset();
+  frmAltaVehiculo.style.display = "none";
 }
 
-function aceptarListadoPerennes() 
+function aceptarAltaAlquiler() 
 {
-  
+  let idAlquiler = parseInt(frmAltaAlquiler.numIdAlquiler.value.trim());
+  let cliente = frmAltaAlquiler.txtCliente.value.trim();
+  let vehiculo = frmAltaAlquiler.txtVehiculo.value.trim();
+  let fechaInicio = frmAltaAlquiler.altaFechaInicio.value.trim();
+  let fechaFin = frmAltaAlquiler.altaFechaFin.value.trim();
+  let oAlquiler = new Alquiler(idAlquiler, cliente, vehiculo, fechaInicio, fechaFin);
+
+  if (oAgencia.altaAlquiler(oAlquiler)) 
+  {
+    alert("Alquiler registrado OK");
+    frmAltaAlquiler.reset();
+    frmAltaAlquiler.style.display = "none";
+  } 
+  else 
+  {
+    alert("Alquiler registrado previamente");
+  }
 }
 
 function aceptarListadoCaducos() 
