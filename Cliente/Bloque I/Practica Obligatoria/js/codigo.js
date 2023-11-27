@@ -1,6 +1,8 @@
 "use strict";
 // Variables globales
-let oVivero = new Vivero();
+let oCliente = new Cliente();
+let oAlquiler = new Alquiler();
+let oVehiculo = new Vehiculo();
 
 datosIniciales();
 
@@ -53,77 +55,61 @@ function gestionFormularios(sFormularioVisible) {
   }
 }
 
-function mostrarAltaArbol() {
-  ocultarTodosLosFormularios();
-
-  // Hacemos visible el formulario
-  frmAltaCliente.style.display = "block";
-}
-
-function ocultarTodosLosFormularios() {
+function ocultarTodosLosFormularios() 
+{
   let oFormularios = document.querySelectorAll("form");
 
-  for (let i = 0; i < oFormularios.length; i++) {
+  for (let i = 0; i < oFormularios.length; i++) 
+  {
     oFormularios[i].style.display = "none";
   }
 }
 
 // AceptarAltaCliente
-function AceptarAltaCliente() {
-  // Insertar el nuevo cliente
-  if (oVivero.altaArbol(oArbol)) {
-    alert("Arbol registrado OK");
-    frmAltaCliente.reset(); // Vaciamos los campos del formulario
+function AceptarAltaCliente() 
+{
+  let dniCliente = parseInt(frmAltaCliente.txtDNI.value.trim());
+  let nombre = frmAltaCliente.txtNombre.value.trim();
+  let apellido1 = frmAltaCliente.txtApellido1.value.trim();
+  let apellido2 = frmAltaCliente.txtApellido2.value.trim();
+  let usuario = generarUsuario(dniCliente, nombre, apellido1, apellido2);
+  let apellidos = apellido1 + apellido2;
+  let oCliente = new Cliente(dniCliente, nombre, apellidos, usuario);
+
+  // Insertar el nuevo árbol
+  if (oCliente.altaCliente(oCliente)) 
+  {
+    alert("Cliente registrado OK");
+    frmAltaCliente.reset();
     frmAltaCliente.style.display = "none";
-  } else {
-    alert("Arbol registrado previamente");
+  } 
+  else 
+  {
+    alert("Cliente registrado previamente");
   }
 }
 
-function aceptarAltaVehiculo() {
-  let sRespuesta =
-    /*Llamada a tallajeArbol*/
+function generarUsuario(dniCliente, nombre, apellido1, apellido2)
+{
+  const inicialNombre = nombre.charAt(0).toLowerCase();
+  const tresLetrasApellido1 = apellido1.slice(0, 3).toLowerCase();
+  const tresLetrasApellido2 = apellido2.slice(0, 3).toLowerCase();
+  const tresUltimosDigitosDNI = dniCliente.slice(-3);
 
-    alert(sRespuesta);
-
-  if (sRespuesta.includes("Correcto") > 0) {
-    frmAltaVehiculo.reset();
-    frmAltaVehiculo.style.display = "none";
-  }
+  return inicialNombre + tresLetrasApellido1 + tresLetrasApellido2 + tresUltimosDigitosDNI;
 }
 
-function aceptarListadoPerennes() {
-  //Crear el listado
+function aceptarAltaVehiculo() 
+{
 
-  let oVentana = open("", "_blank", "");
-
-  oVentana.document.open();
-  oVentana.document.write(
-    "<h1>Listado de árboles perennes de altura mínima: " + iAlturaMinima + " cm</h1>"
-  );
-  oVentana.document.write(/*Listado a mostrar*/);
-  oVentana.document.close();
-  oVentana.document.title = "Listado perennes";
-
-  // Reseteamos y ocultamos el formulario
-  frmListadoCliente.reset();
-  frmListadoCliente.style.display = "none";
 }
 
-function aceptarListadoCaducos() {
-  //Crear el listado
+function aceptarListadoPerennes() 
+{
+  
+}
 
-  let oVentana = open("", "_blank", "");
-
-  oVentana.document.open();
-  oVentana.document.write(
-    "<h1>Listado de árboles caducos con floración el mes: " + sMesFloracion + "</h1>"
-  );
-  oVentana.document.write(/*listado a mostrar*/);
-  oVentana.document.close();
-  oVentana.document.title = "Listado caducos";
-
-  // Reseteamos y ocultamos el formulario
-  frmListadoCaducos.reset();
-  frmListadoCaducos.style.display = "none";
+function aceptarListadoCaducos() 
+{
+  
 }
