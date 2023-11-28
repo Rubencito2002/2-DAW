@@ -17,18 +17,26 @@ function datosIniciales() {
   oAgencia.altaCliente(cliente4);
 
   // Datos Iniciales de Vehiculos.
-  const vehiculo1 = new Coche("ABC-123", "Toyota", "Corolla", "Gasolina", 5);
-  const vehiculo2 = new Coche("DEF-456", "Ford", "Fiesta", "Diésel", 4);
-  const vehiculo3 = new Moto("GHI-789", "Yamaha", "MT-07", "False");
-  const vehiculo4 = new Moto("XYZ-789", "Honda", "CBR500R", "True");
+  const coche1 = new Coche("ABC-123", "Toyota", "Corolla", "Gasolina", 5);
+  const coche2 = new Coche("DEF-456", "Ford", "Fiesta", "Diésel", 4);
+  const moto1 = new Moto("GHI-789", "Yamaha", "MT-07", "False");
+  const moto2 = new Moto("XYZ-789", "Honda", "CBR500R", "True");
   
-  oAgencia.altaVehiculo(vehiculo1);
-  oAgencia.altaVehiculo(vehiculo2);
-  oAgencia.altaVehiculo(vehiculo3)
-  oAgencia.altaVehiculo(vehiculo4);
+  oAgencia.altaVehiculo(coche1);
+  oAgencia.altaVehiculo(coche2);
+  oAgencia.altaVehiculo(moto1)
+  oAgencia.altaVehiculo(moto2);
   
   // Datos Iniciales de Alquileres.
-  oAgencia.altaAlquiler(new Alquiler(1, "10/01/23", "15/01/23", [vehiculo1], cliente1));
+  const alquiler1 = new Alquiler(1, "10/01/23", "15/01/23", [coche1], cliente1);
+  const alquiler2 = new Alquiler(2, "05/02/23", "12/02/23", [coche2], cliente2);
+  const alquiler3 = new Alquiler(3, "20/03/23", "25/03/23", [moto1], cliente3);
+  const alquiler4 = new Alquiler(4, "15/04/23", "22/04/23", [moto2], cliente4);
+
+  oAgencia.altaAlquiler(alquiler1);
+  oAgencia.altaAlquiler(alquiler2);
+  oAgencia.altaAlquiler(alquiler3);
+  oAgencia.altaAlquiler(alquiler4);
 }
 
 // Gestión de formularios
@@ -160,7 +168,7 @@ function aceptarAltaAlquiler()
   let vehiculo = frmAltaAlquiler.txtVehiculo.value.trim();
   let fechaInicio = new Date(frmAltaAlquiler.altaFechaInicio.value.trim());
   let fechaFin = new Date(frmAltaAlquiler.altaFechaFin.value.trim());
-  let oAlquiler = new Alquiler(idAlquiler, fechaInicio, fechaFin, cliente, [vehiculo]);
+  let oAlquiler = new Alquiler(idAlquiler, fechaInicio, fechaFin, [vehiculo], cliente);
 
   if (oAgencia.altaAlquiler(oAlquiler)) 
   {
@@ -176,12 +184,26 @@ function aceptarAltaAlquiler()
 
 function aceptarListadoCliente() 
 {
-  
+  let listado = oAgencia.listadoCliente();
+  let oVentana = open("", "_blank", "");
+
+  oVentana.document.open();
+  oVentana.document.write("<h1>Listado de Clientes</h1>");
+  oVentana.document.write(listado);
+  oVentana.document.close();
+  oVentana.document.title = "Listado Cliente";
 }
 
 function aceptarListadoVehiculo()
 {
+  let listado = oAgencia.listadoVehiculo();
+  let oVentana = open("", "_blank", "");
 
+  oVentana.document.open();
+  oVentana.document.write("<h1>Listado de Vehiculo</h1>");
+  oVentana.document.write(listado);
+  oVentana.document.close();
+  oVentana.document.title = "Listado Vehiculo";
 }
 
 function aceptarListadoAlquilerPorFecha()

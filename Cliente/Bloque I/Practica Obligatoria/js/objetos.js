@@ -364,12 +364,30 @@ class Agencia{
 
     listadoCliente()
     {
-
+        let salida = "<table border='1'>";
+        salida += "<thead><tr><th>DNI</th><th>Nombre</th><th>Apellidos</th><th>Usuario</th></thead><tbody>";
+        for(let cliente of this._cliente)
+        {
+            salida += cliente.toHTMLRow();
+        }
+        
+        salida += "</tbody></table>";
+        return salida;
     }
 
     listadoVehiculo()
     {
-
+        let salida = "<table border='1'>";
+        salida += "<thead><tr><th>Matricula</th><th>Marca</th><th>Modelo</th><th>Ciclomotor</th><th>Combustible</th><th>Plazas</th></thead><tbody>";
+        for(let vehiculo of this._vehiculo)
+        {
+            if(vehiculo._ciclomotor)
+            
+            salida += vehiculo.toHTMLRow();
+        }
+        
+        salida += "</tbody></table>";
+        return salida;
     }
 
     listadoAlquileres(fechaInicio, fechaFin)
