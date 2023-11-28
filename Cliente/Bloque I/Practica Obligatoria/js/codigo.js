@@ -6,10 +6,10 @@ datosIniciales();
 
 function datosIniciales() {
   // Datos Iniciales de Cliente
-  const cliente1 = new Cliente(123456, "Ana", "García", "López");
-  const cliente2 = new Cliente(789012, "Juan", "Martínez", "Rodríguez");
-  const cliente3 = new Cliente(345678, "María", "Pérez", "Sánchez");
-  const cliente4 = new Cliente(901234, "Pedro", "González", "Fernández");
+  const cliente1 = new Cliente(123456, "Ana", "García López", "agarlóp456");
+  const cliente2 = new Cliente(789012, "Juan", "Martínez Rodríguez", "jumartrod012");
+  const cliente3 = new Cliente(345678, "María", "Pérez Sánchez", "mapersán678");
+  const cliente4 = new Cliente(901234, "Pedro", "González Fernández", "pegonzfer234");
 
   oAgencia.altaCliente(cliente1);
   oAgencia.altaCliente(cliente2);
@@ -94,7 +94,7 @@ function aceptarAltaCliente()
   let apellido2 = frmAltaCliente.txtApellidos2.value.trim();
 
   let usuario = generarUsuario(dniCliente, nombre, apellido1, apellido2);
-  let apellidos = apellido1 + apellido2;
+  let apellidos = apellido1 + " " + apellido2;
   let oCliente = new Cliente(dniCliente, nombre, apellidos, usuario);
 
   if (oAgencia.altaCliente(oCliente)) 

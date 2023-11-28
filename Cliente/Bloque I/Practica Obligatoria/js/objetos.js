@@ -61,7 +61,7 @@ class Cliente {
         let fila = "<tr>";
         fila += "<td>" + this.dniCliente + "</td>";
         fila += "<td>" + this.nombre + "</td>";
-        fila += "<td>" + this.apellidos + "</td></tr>";
+        fila += "<td>" + this.apellidos + "</td>";
         fila += "<td>" + this.usuario + "</td></tr>";
         return fila;
     }
@@ -378,15 +378,28 @@ class Agencia{
     listadoVehiculo()
     {
         let salida = "<table border='1'>";
-        salida += "<thead><tr><th>Matricula</th><th>Marca</th><th>Modelo</th><th>Ciclomotor</th><th>Combustible</th><th>Plazas</th></thead><tbody>";
+        salida += "<thead><tr><th>Matricula</th><th>Marca</th><th>Modelo</th><th>Ciclomotor</thead><tbody>";
+
         for(let vehiculo of this._vehiculo)
         {
             if(vehiculo._ciclomotor)
-            
-            salida += vehiculo.toHTMLRow();
+            {
+                salida += vehiculo.toHTMLRow();
+            }
         }
-        
         salida += "</tbody></table>";
+
+        let listadoCoche = "<table border='1'>";
+        listadoCoche += "<thead><tr><th>Matricula</th><th>Marca</th><th>Modelo</th><th>Combustible</th><th>Plazas</th></thead><tbody>";
+        for(let vehiculo of this._vehiculo)
+        {
+            if(vehiculo._combustible && vehiculo._plazas)
+            {
+                listadoCoche += vehiculo.toHTMLRow();
+            }
+        }        
+        listadoCoche += "</tbody></table>";
+        salida += "<br><br>" + listadoCoche;
         return salida;
     }
 
