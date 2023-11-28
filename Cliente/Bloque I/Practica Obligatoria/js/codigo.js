@@ -1,22 +1,36 @@
 "use strict";
 // Variables globales
 let oAgencia = new Agencia();
-/*
+
 datosIniciales();
 
 function datosIniciales() {
-  oVivero.altaArbol(new Perenne(1, 100, "Olivo", true));
-  oVivero.altaArbol(new Caduco(2, 78, "Melocotonero", "abril"));
-  oVivero.altaArbol(new Perenne(3, 50, "Ciprés", false));
-  oVivero.altaArbol(new Perenne(4, 75, "Pino piñonero", true));
-  oVivero.altaArbol(new Caduco(5, 81, "Melocotonero", "abril"));
-  oVivero.altaArbol(new Caduco(6, 110, "Manzano", "mayo"));
-  oVivero.altaArbol(new Perenne(7, 80, "Cedro", false));
-  oVivero.altaArbol(new Caduco(8, 67, "Naranjo", "marzo"));
-  oVivero.altaArbol(new Perenne(9, 90, "Alcornoque", true));
-  oVivero.altaArbol(new Caduco(10, 70, "Peral", "marzo"));
+  // Datos Iniciales de Cliente
+  const cliente1 = new Cliente(123456, "Ana", "García", "López");
+  const cliente2 = new Cliente(789012, "Juan", "Martínez", "Rodríguez");
+  const cliente3 = new Cliente(345678, "María", "Pérez", "Sánchez");
+  const cliente4 = new Cliente(901234, "Pedro", "González", "Fernández");
+
+  oAgencia.altaCliente(cliente1);
+  oAgencia.altaCliente(cliente2);
+  oAgencia.altaCliente(cliente3);
+  oAgencia.altaCliente(cliente4);
+
+  // Datos Iniciales de Vehiculos.
+  const vehiculo1 = new Coche("ABC-123", "Toyota", "Corolla", "Gasolina", 5);
+  const vehiculo2 = new Coche("DEF-456", "Ford", "Fiesta", "Diésel", 4);
+  const vehiculo3 = new Moto("GHI-789", "Yamaha", "MT-07", "False");
+  const vehiculo4 = new Moto("XYZ-789", "Honda", "CBR500R", "True");
+  
+  oAgencia.altaVehiculo(vehiculo1);
+  oAgencia.altaVehiculo(vehiculo2);
+  oAgencia.altaVehiculo(vehiculo3)
+  oAgencia.altaVehiculo(vehiculo4);
+  
+  // Datos Iniciales de Alquileres.
+  oAgencia.altaAlquiler(new Alquiler(1, "10/01/23", "15/01/23", [vehiculo1], cliente1));
 }
-*/
+
 // Gestión de formularios
 function gestionFormularios(sFormularioVisible) {
   ocultarTodosLosFormularios();
@@ -146,7 +160,7 @@ function aceptarAltaAlquiler()
   let vehiculo = frmAltaAlquiler.txtVehiculo.value.trim();
   let fechaInicio = new Date(frmAltaAlquiler.altaFechaInicio.value.trim());
   let fechaFin = new Date(frmAltaAlquiler.altaFechaFin.value.trim());
-  let oAlquiler = new Alquiler(idAlquiler, cliente, vehiculo, fechaInicio, fechaFin);
+  let oAlquiler = new Alquiler(idAlquiler, fechaInicio, fechaFin, cliente, [vehiculo]);
 
   if (oAgencia.altaAlquiler(oAlquiler)) 
   {
