@@ -32,10 +32,10 @@ function datosIniciales() {
   oAgencia.altaVehiculo(moto3);
   
   // Datos Iniciales de Alquileres.
-  const alquiler1 = new Alquiler(1, "10/01/23", "15/01/23", cliente1, coche1);
-  const alquiler2 = new Alquiler(2, "05/02/23", "12/02/23", cliente2, [coche2]);
-  const alquiler3 = new Alquiler(3, "20/03/23", "25/03/23", cliente3, [moto1]);
-  const alquiler4 = new Alquiler(4, "15/04/23", "22/04/23", cliente4, [moto2]);
+  const alquiler1 = new Alquiler(1, "10/01/2023", "15/01/2023", cliente1, coche1);
+  const alquiler2 = new Alquiler(2, "05/02/2023", "12/02/2023", cliente2, coche2);
+  const alquiler3 = new Alquiler(3, "20/03/2023", "25/03/2023", cliente3, moto2);
+  const alquiler4 = new Alquiler(4, "15/04/2023", "22/04/2023", cliente4, moto2);
 
   oAgencia.altaAlquiler(alquiler1);
   oAgencia.altaAlquiler(alquiler2);
@@ -162,8 +162,6 @@ function aceptarAltaVehiculo()
   {
     alert("Vehiculo con matricula: "+ matricula + " está registrado previamente");
   }
-
-  
 }
 
 function aceptarAltaAlquiler() 
@@ -174,21 +172,30 @@ function aceptarAltaAlquiler()
   let fechaInicio = new Date(frmAltaAlquiler.altaFechaInicio.value.trim());
   let fechaFin = new Date(frmAltaAlquiler.altaFechaFin.value.trim());
 
-  let oCliente = oAgencia.buscarClientePorUsuario(cliente);
-  let oVehiculo = oAgencia.buscarVehiculoPorMatricula(vehiculo);
-  let tVehiculo;
-  tVehiculo.push(vehiculo);
-  let oAlquiler = new Alquiler(idAlquiler, fechaInicio, fechaFin, oCliente, tVehiculo);
+  let oCliente = oAgencia.buscarCliente(cliente);
+  
+  if (oAgencia.buscarVehiculo(vehiculo) === null)
+  {
+    alert("Vehiculo no existe");
+  }
+  else if(fechaInicio > fechaFin)
+  {
+    alert("La fecha de inicio no puede ser mayor que la fecha de fin");
+  }
+  else
+  {
+    let oAlquiler = new Alquiler(idAlquiler, fechaInicio, fechaFin, oCliente, vehiculo);
 
-  if (oAgencia.altaAlquiler(oAlquiler)) 
-  {
-    alert("Alquiler registrado OK");
-    frmAltaAlquiler.reset();
-    frmAltaAlquiler.style.display = "none";
-  } 
-  else 
-  {
-    alert("Alquiler registrado previamente");
+    if (oAgencia.altaAlquiler(oAlquiler)) 
+    {
+      alert("Alquiler registrado OK");
+      frmAltaAlquiler.reset();
+      frmAltaAlquiler.style.display = "none";
+    } 
+    else 
+    {
+      alert("Alquiler registrado previamente");
+    }
   }
 }
 

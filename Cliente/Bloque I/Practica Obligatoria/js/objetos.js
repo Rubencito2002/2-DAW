@@ -205,13 +205,13 @@ class Alquiler {
     _vehiculo;
 
     // Constructor de Alquilar.
-    constructor(idAlquilar, fechaInicio, fechaFin, cliente)
+    constructor(idAlquilar, fechaInicio, fechaFin, cliente, vehiculo)
     {
         this._idAlquilar = idAlquilar;
         this._fechaInicio = fechaInicio;
         this._fechaFin = fechaFin;
         this._cliente = cliente;
-        this._vehiculo = [];
+        this._vehiculo = [vehiculo];
     }
 
     // Getters & Setters de Alquilar.
@@ -341,12 +341,23 @@ class Agencia{
         }
     }
 
-    buscarClientePorUsuario(usuario)
+    buscarCliente(dniCliente)
     {
-        return this._cliente.find(cliente => cliente.usuario === usuario);
+        let clienteEncontrado = this._cliente.find(cliente => cliente.dniCliente === dniCliente);
+
+        if (clienteEncontrado) 
+        {
+            console.log("Cliente encontrado:", clienteEncontrado);
+            return clienteEncontrado;
+        } 
+        else 
+        {
+            console.log("Cliente no encontrado");
+            return null;
+        }
     }
 
-    buscarVehiculoPorMatricula(matricula)
+    buscarVehiculo(matricula)
     {
         return this._vehiculo.find(vehiculo => vehiculo.matricula === matricula);
     }
@@ -363,8 +374,6 @@ class Agencia{
         {
             return false;
         }
-
-        
     }
 
     bajarAlquiler(alquiler)
