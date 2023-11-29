@@ -21,11 +21,13 @@ function datosIniciales() {
   const coche2 = new Coche("DEF-456", "Ford", "Fiesta", "Diésel", 4);
   const moto1 = new Moto("GHI-789", "Yamaha", "MT-07", "False");
   const moto2 = new Moto("XYZ-789", "Honda", "CBR500R", "True");
+  const coche3 = new Coche(" LMN-345", "Tesla", "Model S", "Eléctrico", 5);
   
   oAgencia.altaVehiculo(coche1);
   oAgencia.altaVehiculo(coche2);
   oAgencia.altaVehiculo(moto1)
   oAgencia.altaVehiculo(moto2);
+  oAgencia.altaVehiculo(coche3);
   
   // Datos Iniciales de Alquileres.
   const alquiler1 = new Alquiler(1, "10/01/23", "15/01/23", [coche1], cliente1);
@@ -231,5 +233,12 @@ function aceptarListadoAlquilerPorCliente()
 
 function aceptarListadoCocheElectrico()
 {
+  let listado = oAgencia.listadoCocheElectrico();
+  let oVentana = open("", "_blank", "");
 
+  oVentana.document.open();
+  oVentana.document.write("<h1>Listado de Coche Electrico</h1>");
+  oVentana.document.write(listado);
+  oVentana.document.close();
+  oVentana.document.title = "Listado Coche Electrico";
 }

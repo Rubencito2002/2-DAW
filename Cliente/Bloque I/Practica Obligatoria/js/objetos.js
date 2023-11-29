@@ -415,6 +415,16 @@ class Agencia{
 
     listadoCocheElectrico()
     {
-        
+        let salida = "<table border='1'>";
+        salida += "<thead><tr><th>Matricula</th><th>Marca</th><th>Modelo</th><th>Combustible</th><th>Plazas</th></thead><tbody>";
+        for(let vehiculo of this._vehiculo)
+        {
+            if(vehiculo._combustible === "Electrico" || vehiculo._combustible === "Eléctrico")
+            {
+                salida += vehiculo.toHTMLRow();
+            }
+        }
+        salida += "</tbody></table>";
+        return salida;
     }
 }
