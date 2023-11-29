@@ -205,12 +205,12 @@ class Alquiler {
     _vehiculo;
 
     // Constructor de Alquilar.
-    constructor(idAlquilar, fechaInicio, fechaFin)
+    constructor(idAlquilar, fechaInicio, fechaFin, cliente)
     {
         this._idAlquilar = idAlquilar;
         this._fechaInicio = fechaInicio;
         this._fechaFin = fechaFin;
-        this._cliente = Cliente;
+        this._cliente = cliente;
         this._vehiculo = [];
     }
 
@@ -341,6 +341,16 @@ class Agencia{
         }
     }
 
+    buscarClientePorUsuario(usuario)
+    {
+        return this._cliente.find(cliente => cliente.usuario === usuario);
+    }
+
+    buscarVehiculoPorMatricula(matricula)
+    {
+        return this._vehiculo.find(vehiculo => vehiculo.matricula === matricula);
+    }
+
     altaVehiculo(vehiculo)
     {
         let existeMatricula = this.vehiculo.some(v => v.matricula === vehiculo.matricula);
@@ -405,7 +415,16 @@ class Agencia{
 
     listadoAlquileres(fechaInicio, fechaFin)
     {
-        
+        let listado = this._alquilar.filter(alquiler => alquiler.fechaInicio >= fechaInicio && alquiler.fechaFin <= fechaFin);
+
+        let salida = "<table border='1'>";
+        salida += "<thead><tr><th>idAlquiler</th><th>idCliente</th><th>Nombre</th><th>Fecha Inicio</thead><th>Fecha Fin</thead><tbody>";
+        for(let alquiler of listado)
+        {
+            salida += alquiler.toHTMLRow();
+        }
+        salida += "</tbody></table>";
+        return salida;
     }
 
     listadoAlquileresCliente(cliente)

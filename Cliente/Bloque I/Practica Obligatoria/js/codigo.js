@@ -19,21 +19,23 @@ function datosIniciales() {
   // Datos Iniciales de Vehiculos.
   const coche1 = new Coche("ABC-123", "Toyota", "Corolla", "Gasolina", 5);
   const coche2 = new Coche("DEF-456", "Ford", "Fiesta", "Diésel", 4);
+  const coche3 = new Coche(" LMN-345", "Tesla", "Model S", "Eléctrico", 5);
   const moto1 = new Moto("GHI-789", "Yamaha", "MT-07", "False");
   const moto2 = new Moto("XYZ-789", "Honda", "CBR500R", "True");
-  const coche3 = new Coche(" LMN-345", "Tesla", "Model S", "Eléctrico", 5);
+  const moto3 = new Moto("XYZ-779", "Honda", "CAR594R", "False");
   
   oAgencia.altaVehiculo(coche1);
   oAgencia.altaVehiculo(coche2);
+  oAgencia.altaVehiculo(coche3);
   oAgencia.altaVehiculo(moto1)
   oAgencia.altaVehiculo(moto2);
-  oAgencia.altaVehiculo(coche3);
+  oAgencia.altaVehiculo(moto3);
   
   // Datos Iniciales de Alquileres.
-  const alquiler1 = new Alquiler(1, "10/01/23", "15/01/23", [coche1], cliente1);
-  const alquiler2 = new Alquiler(2, "05/02/23", "12/02/23", [coche2], cliente2);
-  const alquiler3 = new Alquiler(3, "20/03/23", "25/03/23", [moto1], cliente3);
-  const alquiler4 = new Alquiler(4, "15/04/23", "22/04/23", [moto2], cliente4);
+  const alquiler1 = new Alquiler(1, "10/01/23", "15/01/23", cliente1, coche1);
+  const alquiler2 = new Alquiler(2, "05/02/23", "12/02/23", cliente2, [coche2]);
+  const alquiler3 = new Alquiler(3, "20/03/23", "25/03/23", cliente3, [moto1]);
+  const alquiler4 = new Alquiler(4, "15/04/23", "22/04/23", cliente4, [moto2]);
 
   oAgencia.altaAlquiler(alquiler1);
   oAgencia.altaAlquiler(alquiler2);
@@ -153,14 +155,15 @@ function aceptarAltaVehiculo()
   if (oAgencia.altaVehiculo(oVehiculo)) 
   {
     alert("Vehiculo registrado OK");
+    frmAltaVehiculo.reset();
+    frmAltaVehiculo.style.display = "none";
   } 
   else 
   {
     alert("Vehiculo con matricula: "+ matricula + " está registrado previamente");
   }
 
-  frmAltaVehiculo.reset();
-  frmAltaVehiculo.style.display = "none";
+  
 }
 
 function aceptarAltaAlquiler() 
@@ -170,7 +173,12 @@ function aceptarAltaAlquiler()
   let vehiculo = frmAltaAlquiler.txtVehiculo.value.trim();
   let fechaInicio = new Date(frmAltaAlquiler.altaFechaInicio.value.trim());
   let fechaFin = new Date(frmAltaAlquiler.altaFechaFin.value.trim());
-  let oAlquiler = new Alquiler(idAlquiler, fechaInicio, fechaFin, [vehiculo], cliente);
+
+  let oCliente = oAgencia.buscarClientePorUsuario(cliente);
+  let oVehiculo = oAgencia.buscarVehiculoPorMatricula(vehiculo);
+  let tVehiculo;
+  tVehiculo.push(vehiculo);
+  let oAlquiler = new Alquiler(idAlquiler, fechaInicio, fechaFin, oCliente, tVehiculo);
 
   if (oAgencia.altaAlquiler(oAlquiler)) 
   {
