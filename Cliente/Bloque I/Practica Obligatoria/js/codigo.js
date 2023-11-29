@@ -199,6 +199,22 @@ function aceptarAltaAlquiler()
   }
 }
 
+function aceptarBajaAlquiler()
+{
+  let idAlquiler = parseInt(frmBajaAlquiler.numIdAlquiler.value.trim());
+  
+  if(oAgencia.bajarAlquiler(idAlquiler))
+  {
+    alert("Alquiler Eliminado");
+    frmBajaAlquiler.reset();
+    frmBajaAlquiler.style.display = "none";
+  }
+  else
+  {
+    alert("El alquiler no existe en la base de datos");
+  }
+}
+
 function aceptarListadoCliente() 
 {
   let listado = oAgencia.listadoCliente();
@@ -227,12 +243,12 @@ function aceptarListadoAlquilerPorFecha()
 {
   let fechaInicio = frmListadoAlquilerPorFecha.listadoFechaInicio.value.trim();
   let fechaFin = frmListadoAlquilerPorFecha.listadoFechaFin.value.trim();
-  let listado = oAgencia.listadoAlquileres(fechaInicio, fechaFin);
+  let listado = oAgencia.listadoAlquileresFecha(fechaInicio, fechaFin);
 
   let oVentana = open("", "_blank", "");
 
   oVentana.document.open();
-  oVentana.document.write("<h1>Listado de Vehiculo Por Fecha");
+  oVentana.document.write("<h1>Listado de Vehiculo Por Fecha</h1>");
   oVentana.document.write(listado);
   oVentana.document.close();
   oVentana.document.title = "Listado alquileres por fecha";
@@ -243,7 +259,19 @@ function aceptarListadoAlquilerPorFecha()
 
 function aceptarListadoAlquilerPorCliente()
 {
+  let idCliente = frmListadoAlquilerPorCliente.listadoIdCliente.value.trim();
+  let listado = oAgencia.listadoAlquileresCliente(idCliente);
 
+  let oVentana = open("", "_blank", "");
+
+  oVentana.document.open();
+  oVentana.document.write("<h1>Listado de Alquiler Por Cliente</h1>");
+  oVentana.document.write(listado);
+  oVentana.document.close();
+  oVentana.document.title = "Listado alquileres por cliente";
+
+  frmListadoAlquilerPorCliente.reset();
+  frmListadoAlquilerPorCliente.style.display = "none";
 }
 
 function aceptarListadoCocheElectrico()

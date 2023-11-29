@@ -376,9 +376,19 @@ class Agencia{
         }
     }
 
-    bajarAlquiler(alquiler)
+    bajarAlquiler(idAlquiler)
     {
-
+        let alquilerEncontrado = this._alquilar.find(alquiler => alquiler.idAlquilar === idAlquiler);
+        if(alquilerEncontrado)
+        {
+            let indice = this._alquilar.indexOf(alquilerEncontrado);
+            this._alquilar.splice(indice, 1);
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     listadoCliente()
@@ -397,8 +407,7 @@ class Agencia{
     listadoVehiculo()
     {
         let salida = "<table border='1'>";
-        salida += "<thead><tr><th>Matricula</th><th>Marca</th><th>Modelo</th><th>Ciclomotor</thead><tbody>";
-
+        salida += "<thead><tr><th>Matricula</th><th>Marca</th><th>Modelo</th><th>Ciclomotor</th></thead><tbody>";
         for(let vehiculo of this._vehiculo)
         {
             if(vehiculo._ciclomotor)
@@ -422,7 +431,7 @@ class Agencia{
         return salida;
     }
 
-    listadoAlquileres(fechaInicio, fechaFin)
+    listadoAlquileresFecha(fechaInicio, fechaFin)
     {
         let listado = this._alquilar.filter(alquiler => alquiler.fechaInicio >= fechaInicio && alquiler.fechaFin <= fechaFin);
 
@@ -436,21 +445,33 @@ class Agencia{
         return salida;
     }
 
-    listadoAlquileresCliente(cliente)
+    listadoAlquileresCliente(idCliente)
     {
+        //let dniClienteABuscar = 
+        let listado = this.filtrarAlquilerPorDNI(idCliente);
+        let salida = "<table border='1'>";
+        salida += "<thead><tr><th>idAlquiler</th><th>idCliente</th><th>Nombre</th><th>Fecha Inicio</thead><th>Fecha Fin</thead><tbody>";
+        for(let alquiler of listado)
+        {
+            salida += alquiler.toHTMLRow();
+        }
+        salida += "</tbody></table>";
+        return salida;
+    }
 
+    filtrarAlquilerPorDNI(id1Cliente)
+    {
+        return this._alquilar.filter(alquiler => alquiler._cliente._dniCliente === id1Cliente);
     }
 
     listadoCocheElectrico()
     {
+        let listado = this._vehiculo.filter(vehiculo => vehiculo._combustible === "Electrico" || vehiculo._combustible === "Eléctrico");
         let salida = "<table border='1'>";
         salida += "<thead><tr><th>Matricula</th><th>Marca</th><th>Modelo</th><th>Combustible</th><th>Plazas</th></thead><tbody>";
-        for(let vehiculo of this._vehiculo)
+        for(let vehiculo of listado)
         {
-            if(vehiculo._combustible === "Electrico" || vehiculo._combustible === "Eléctrico")
-            {
-                salida += vehiculo.toHTMLRow();
-            }
+            salida += vehiculo.toHTMLRow();
         }
         salida += "</tbody></table>";
         return salida;
