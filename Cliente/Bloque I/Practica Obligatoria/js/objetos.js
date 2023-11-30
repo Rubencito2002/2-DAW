@@ -343,16 +343,24 @@ class Agencia{
 
     buscarCliente(dniCliente)
     {
-        let clienteEncontrado = this._cliente.find(cliente => cliente.dniCliente === dniCliente);
-
+        let clienteEncontrado = null;
+        for (let i = 0; i < this._cliente.length; i++) 
+        {
+            if (this._cliente[i].dniCliente === dniCliente) 
+            {
+                clienteEncontrado = this._cliente[i];
+                break;
+            }
+        }
+        
         if (clienteEncontrado) 
         {
-            console.log("Cliente encontrado:", clienteEncontrado);
+            //console.log("Cliente encontrado:", clienteEncontrado);
             return clienteEncontrado;
         } 
         else 
         {
-            console.log("Cliente no encontrado");
+            //console.log("Cliente no encontrado");
             return null;
         }
     }
@@ -445,12 +453,11 @@ class Agencia{
         return salida;
     }
 
-    listadoAlquileresCliente(idCliente)
+    listadoAlquileresCliente(DNICliente)
     {
-        //let dniClienteABuscar = 
-        let listado = this.filtrarAlquilerPorDNI(idCliente);
+        let listado = this.filtrarAlquilerPorDNI(DNICliente);
         let salida = "<table border='1'>";
-        salida += "<thead><tr><th>idAlquiler</th><th>idCliente</th><th>Nombre</th><th>Fecha Inicio</thead><th>Fecha Fin</thead><tbody>";
+        salida += "<thead><tr><th>idAlquiler</th><th>Nombre</th><th>Fecha Inicio</thead><th>Fecha Fin</thead><tbody>";
         for(let alquiler of listado)
         {
             salida += alquiler.toHTMLRow();

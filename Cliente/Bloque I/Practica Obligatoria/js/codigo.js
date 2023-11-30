@@ -166,21 +166,34 @@ function aceptarAltaVehiculo()
 
 function aceptarAltaAlquiler() 
 {
+  // Variables para almacenar el id, cliente y vehiculo
   let idAlquiler = parseInt(frmAltaAlquiler.numIdAlquiler.value.trim());
-  let cliente = frmAltaAlquiler.txtCliente.value.trim();
+  let cliente = parseInt(frmAltaAlquiler.txtCliente.value.trim());
   let vehiculo = frmAltaAlquiler.txtVehiculo.value.trim();
-  let fechaInicio = new Date(frmAltaAlquiler.altaFechaInicio.value.trim());
-  let fechaFin = new Date(frmAltaAlquiler.altaFechaFin.value.trim());
-
+  // Variables para almacenar la fecha de inicio y fin del alquiler
+  let ofechaInicio = new Date(frmAltaAlquiler.altaFechaInicio.value.trim());
+  let ofechaFin = new Date(frmAltaAlquiler.altaFechaFin.value.trim());
+  let diaInicio = ofechaInicio.getDate();
+  let mesInicio = ofechaInicio.getMonth() + 1;
+  let anyoInicio = ofechaInicio.getFullYear();
+  let fechaInicio = diaInicio + "/" + mesInicio + "/" + anyoInicio;
+  let diaFin = ofechaFin.getDate();
+  let mesFin = ofechaFin.getMonth() + 1;
+  let anyoFin = ofechaFin.getFullYear();
+  let fechaFin = diaFin + "/" + mesFin + "/" + anyoFin;
+  // Variables para almacenar el cliente y el vehiculo
   let oCliente = oAgencia.buscarCliente(cliente);
-  
-  if (oAgencia.buscarVehiculo(vehiculo) === null)
+  if(oCliente === null)
+  {
+    alert("Cliente no existe");
+  }
+  else if (oAgencia.buscarVehiculo(vehiculo) === null)
   {
     alert("Vehiculo no existe");
   }
-  else if(fechaInicio > fechaFin)
+  else if(!(ofechaInicio > ofechaFin) || !(ofechaFin < ofechaInicio))
   {
-    alert("La fecha de inicio no puede ser mayor que la fecha de fin");
+    alert("Fechas Ocupadas")
   }
   else
   {
@@ -259,7 +272,7 @@ function aceptarListadoAlquilerPorFecha()
 
 function aceptarListadoAlquilerPorCliente()
 {
-  let idCliente = frmListadoAlquilerPorCliente.listadoIdCliente.value.trim();
+  let idCliente = parseInt(frmListadoAlquilerPorCliente.listadoDNICliente.value.trim());
   let listado = oAgencia.listadoAlquileresCliente(idCliente);
 
   let oVentana = open("", "_blank", "");
