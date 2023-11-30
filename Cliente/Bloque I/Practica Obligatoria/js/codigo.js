@@ -181,34 +181,29 @@ function aceptarAltaAlquiler()
   let mesFin = ofechaFin.getMonth() + 1;
   let anyoFin = ofechaFin.getFullYear();
   let fechaFin = diaFin + "/" + mesFin + "/" + anyoFin;
+
   // Variables para almacenar el cliente y el vehiculo
   let oCliente = oAgencia.buscarCliente(cliente);
   if(oCliente === null)
   {
     alert("Cliente no existe");
   }
-  else if (oAgencia.buscarVehiculo(vehiculo) === null)
+  let oVehiculo = oAgencia.buscarVehiculo(vehiculo);
+  if (oVehiculo === null)
   {
     alert("Vehiculo no existe");
   }
-  else if(!(ofechaInicio > ofechaFin) || !(ofechaFin < ofechaInicio))
+  
+  let oAlquiler = new Alquiler(idAlquiler, fechaInicio, fechaFin, oCliente, vehiculo);
+  if (oAgencia.altaAlquiler(oAlquiler)) 
   {
-    alert("Fechas Ocupadas")
-  }
-  else
+    alert("Alquiler registrado OK");
+    frmAltaAlquiler.reset();
+    frmAltaAlquiler.style.display = "none";
+  } 
+  else 
   {
-    let oAlquiler = new Alquiler(idAlquiler, fechaInicio, fechaFin, oCliente, vehiculo);
-
-    if (oAgencia.altaAlquiler(oAlquiler)) 
-    {
-      alert("Alquiler registrado OK");
-      frmAltaAlquiler.reset();
-      frmAltaAlquiler.style.display = "none";
-    } 
-    else 
-    {
-      alert("Alquiler registrado previamente");
-    }
+    alert("Alquiler registrado previamente");
   }
 }
 

@@ -455,7 +455,7 @@ class Agencia{
                                             <td>${alquiler._cliente._nombre}</td>
                                             <td>${alquiler.fechaInicio}</td>
                                             <td>${alquiler.fechaFin}</td>
-                                            <td>${alquiler._alquilar}</td></tr>`);
+                                            <td>${alquiler._vehiculo}</td></tr>`);
 
         salida += "</tbody></table>";
         return salida;
