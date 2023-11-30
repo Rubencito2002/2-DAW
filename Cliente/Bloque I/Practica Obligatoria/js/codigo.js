@@ -254,14 +254,22 @@ function aceptarListadoVehiculo()
 
 function aceptarListadoAlquilerPorFecha()
 {
-  let fechaInicio = frmListadoAlquilerPorFecha.listadoFechaInicio.value.trim();
-  let fechaFin = frmListadoAlquilerPorFecha.listadoFechaFin.value.trim();
+  let ofechaInicio = new Date(frmListadoAlquilerPorFecha.listadoFechaInicio.value.trim());
+  let ofechaFin = new Date(frmListadoAlquilerPorFecha.listadoFechaFin.value.trim());
+  let diaInicio = ofechaInicio.getDate();
+  let mesInicio = ofechaInicio.getMonth() + 1;
+  let anyoInicio = ofechaInicio.getFullYear();
+  let fechaInicio = diaInicio + "/" + mesInicio + "/" + anyoInicio;
+  let diaFin = ofechaFin.getDate();
+  let mesFin = ofechaFin.getMonth() + 1;
+  let anyoFin = ofechaFin.getFullYear();
+  let fechaFin = diaFin + "/" + mesFin + "/" + anyoFin;
+
   let listado = oAgencia.listadoAlquileresFecha(fechaInicio, fechaFin);
 
   let oVentana = open("", "_blank", "");
-
   oVentana.document.open();
-  oVentana.document.write("<h1>Listado de Vehiculo Por Fecha</h1>");
+  oVentana.document.write("<h1>Listado de Alquileres Por Fecha</h1>");
   oVentana.document.write(listado);
   oVentana.document.close();
   oVentana.document.title = "Listado alquileres por fecha";

@@ -259,6 +259,10 @@ class Alquiler {
     {
         let fila = "<tr>";
         fila += "<td>" + this.idAlquilar + "</td>";
+        for (let i = 0; i < this._cliente.length; i++) 
+        {
+            salida += cliente.toHTMLRow();
+        }
         fila += "<td>" + this.Cliente + "</td>";
         fila += "<td>" + this.vehiculo + "</td></tr>";
         fila += "<td>" + this.fechaInicio + "</td></tr>";
@@ -444,31 +448,32 @@ class Agencia{
         let listado = this._alquilar.filter(alquiler => alquiler.fechaInicio >= fechaInicio && alquiler.fechaFin <= fechaFin);
 
         let salida = "<table border='1'>";
-        salida += "<thead><tr><th>idAlquiler</th><th>idCliente</th><th>Nombre</th><th>Fecha Inicio</thead><th>Fecha Fin</thead><tbody>";
-        for(let alquiler of listado)
-        {
-            salida += alquiler.toHTMLRow();
-        }
+        salida += "<thead><tr><th>idAlquiler</th><th>idCliente</th><th>Nombre</th><th>Fecha Inicio</th><th>Fecha Fin</th><th>Vehiculo</th></tr></thead><tbody>";
+        
+        listado.forEach(alquiler => salida += `<tr><td>${alquiler.idAlquilar}</td>
+                                            <td>${alquiler._cliente._dniCliente}</td>
+                                            <td>${alquiler._cliente._nombre}</td>
+                                            <td>${alquiler.fechaInicio}</td>
+                                            <td>${alquiler.fechaFin}</td>
+                                            <td>${alquiler._alquilar}</td></tr>`);
+
         salida += "</tbody></table>";
         return salida;
     }
 
     listadoAlquileresCliente(DNICliente)
     {
-        let listado = this.filtrarAlquilerPorDNI(DNICliente);
+        let listado = this._alquilar.filter(alquiler => alquiler._cliente._dniCliente === DNICliente);
         let salida = "<table border='1'>";
-        salida += "<thead><tr><th>idAlquiler</th><th>Nombre</th><th>Fecha Inicio</thead><th>Fecha Fin</thead><tbody>";
-        for(let alquiler of listado)
-        {
-            salida += alquiler.toHTMLRow();
-        }
+        salida += "<thead><tr><th>idAlquiler</th><th>idCliente</th><th>Nombre</th><th>Fecha Inicio</th><th>Fecha Fin</th></tr></thead><tbody>";
+        
+        listado.forEach(alquiler => salida += `<tr><td>${alquiler.idAlquilar}</td>
+                                            <td>${alquiler._cliente._dniCliente}</td>
+                                            <td>${alquiler._cliente._nombre}</td>
+                                            <td>${alquiler.fechaInicio}</td>
+                                            <td>${alquiler.fechaFin}</td></tr>`);
         salida += "</tbody></table>";
         return salida;
-    }
-
-    filtrarAlquilerPorDNI(id1Cliente)
-    {
-        return this._alquilar.filter(alquiler => alquiler._cliente._dniCliente === id1Cliente);
     }
 
     listadoCocheElectrico()
