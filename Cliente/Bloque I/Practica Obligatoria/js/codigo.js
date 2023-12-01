@@ -17,12 +17,12 @@ function datosIniciales() {
   oAgencia.altaCliente(cliente4);
 
   // Datos Iniciales de Vehiculos.
-  const coche1 = new Coche("ABC-123", "Toyota", "Corolla", "Gasolina", 5);
-  const coche2 = new Coche("DEF-456", "Ford", "Fiesta", "Diésel", 4);
-  const coche3 = new Coche(" LMN-345", "Tesla", "Model S", "Eléctrico", 5);
-  const moto1 = new Moto("GHI-789", "Yamaha", "MT-07", "False");
-  const moto2 = new Moto("XYZ-789", "Honda", "CBR500R", "True");
-  const moto3 = new Moto("XYZ-779", "Honda", "CAR594R", "False");
+  const coche1 = new Coche("ABC123", "Toyota", "Corolla", "Gasolina", 5);
+  const coche2 = new Coche("DEF456", "Ford", "Fiesta", "Diésel", 4);
+  const coche3 = new Coche(" LMN345", "Tesla", "Model S", "Eléctrico", 5);
+  const moto1 = new Moto("GHI789", "Yamaha", "MT-07", "False");
+  const moto2 = new Moto("XYZ789", "Honda", "CBR500R", "True");
+  const moto3 = new Moto("XYZ779", "Honda", "CAR594R", "False");
   
   oAgencia.altaVehiculo(coche1);
   oAgencia.altaVehiculo(coche2);
@@ -173,14 +173,8 @@ function aceptarAltaAlquiler()
   // Variables para almacenar la fecha de inicio y fin del alquiler
   let ofechaInicio = new Date(frmAltaAlquiler.altaFechaInicio.value.trim());
   let ofechaFin = new Date(frmAltaAlquiler.altaFechaFin.value.trim());
-  let diaInicio = ofechaInicio.getDate();
-  let mesInicio = ofechaInicio.getMonth() + 1;
-  let anyoInicio = ofechaInicio.getFullYear();
-  let fechaInicio = diaInicio + "/" + mesInicio + "/" + anyoInicio;
-  let diaFin = ofechaFin.getDate();
-  let mesFin = ofechaFin.getMonth() + 1;
-  let anyoFin = ofechaFin.getFullYear();
-  let fechaFin = diaFin + "/" + mesFin + "/" + anyoFin;
+  let fechaInicio = ofechaInicio.getDate() + "/" + ofechaInicio.getMonth() + "/" + ofechaInicio.getFullYear();
+  let fechaFin = ofechaFin.getDate() + "/" + ofechaFin.getMonth() + "/" + ofechaFin.getFullYear();
 
   // Variables para almacenar el cliente y el vehiculo
   let oCliente = oAgencia.buscarCliente(cliente);
