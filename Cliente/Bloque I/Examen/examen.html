@@ -1,0 +1,331 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Examen Bloque I</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <script src="bootstrap/js/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <style type="text/css">
+      body {
+        margin-left: 10px;
+      }
+
+      form {
+        display: none;
+      }
+
+      #formularios {
+        margin-top: 60px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Tienda PC</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="#" onclick="gestionFormularios('frmAltaCatalogo');">Alta Catálogo</a>
+          </li>
+          <li>
+            <a href="#" onclick="gestionFormularios('frmEntradaStock');">Entrada Stock</a>
+          </li>
+          <li>
+            <a href="#" onclick="gestionFormularios('frmSalidaStock');">Salida Stock</a>
+          </li>
+          <li>
+            <a href="#" onclick="mostrarListadoCatalogo();">Listado Catálogo</a>
+          </li>
+          <li>
+            <a href="#" onclick="mostrarListadoStock();">Listado Stock</a>
+          </li>
+          <li>
+            <a href="#" onclick="mostrarTotales();">Mostrar Totales</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container-fluid" id="formularios">
+      <form class="form-horizontal" name="frmAltaCatalogo" id="frmAltaCatalogo">
+        <fieldset>
+          <!-- Form Name -->
+          <legend>Alta de ordenador</legend>
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-xs-4 control-label" for="txtMarca">Marca</label>
+            <div class="col-xs-4">
+              <input
+                id="txtMarca"
+                name="txtMarca"
+                placeholder="Marca"
+                class="form-control input-md"
+                type="text"
+              />
+            </div>
+          </div>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-xs-4 control-label" for="txtModelo">Modelo</label>
+            <div class="col-xs-4">
+              <input
+                id="txtModelo"
+                name="txtModelo"
+                placeholder="Modelo"
+                class="form-control input-md"
+                type="text"
+              />
+            </div>
+          </div>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-xs-4 control-label" for="txtPrecio">Precio</label>
+            <div class="col-xs-4">
+              <input
+                id="txtPrecio"
+                name="txtPrecio"
+                placeholder="Precio"
+                class="form-control input-md"
+                type="text"
+              />
+            </div>
+          </div>
+
+          <!-- Multiple Radios -->
+          <div class="form-group">
+            <label class="col-xs-4 control-label" for="rbtOrdenador">Ordenador</label>
+            <div class="col-xs-4">
+              <div class="radio">
+                <input
+                  name="rbtOrdenador"
+                  id="rbtOrdenador-Sobremesa"
+                  value="sobremesa"
+                  checked="checked"
+                  type="radio"
+                />
+                <label for="rbtOrdenador-Sobremesa">Sobremesa</label>
+              </div>
+              <div class="radio">
+                <input
+                  name="rbtOrdenador"
+                  id="rbtOrdenador-Portatil"
+                  value="portatil"
+                  checked="checked"
+                  type="radio"
+                />
+                <label for="rbtOrdenador-Portatil">Portátil</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-xs-4 control-label" for="txtPulgadas">Pulgadas (Portátil)</label>
+            <div class="col-xs-4">
+              <input
+                id="txtPulgadas"
+                name="txtPulgadas"
+                placeholder="Pulgadas"
+                class="form-control input-md"
+                type="text"
+              />
+            </div>
+          </div>
+
+          <!-- Multiple Radios -->
+          <div class="form-group">
+            <label class="col-xs-4 control-label" for="rbtDiscoSSD">Disco SSD (Portátil)</label>
+            <div class="col-xs-4">
+              <div class="radio">
+                <input
+                  name="rbtDiscoSSD"
+                  id="rbtDiscoSSD-S"
+                  value="S"
+                  checked="checked"
+                  type="radio"
+                />
+                <label for="rbtDiscoSSD-S">Si</label>
+              </div>
+              <div class="radio">
+                <input
+                  name="rbtDiscoSSD"
+                  id="rbtDiscoSSD-N"
+                  value="N"
+                  checked="checked"
+                  type="radio"
+                />
+                <label for="rbtDiscoSSD-N">No</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-xs-4 control-label" for="txtGrafica"
+              >Tarjeta Gráfica (Sobremesa)</label
+            >
+            <div class="col-xs-4">
+              <input
+                id="txtGrafica"
+                name="txtGrafica"
+                placeholder="Tarjeta gráfica"
+                class="form-control input-md"
+                type="text"
+              />
+            </div>
+          </div>
+
+          <!-- Input Button -->
+          <div class="form-group">
+            <label class="col-xs-4 control-label" for="btnAceptarAltaCatalogo"></label>
+            <div class="col-xs-4">
+              <input
+                type="button"
+                id="btnAceptarAltaCatalogo"
+                name="btnAceptarAltaCatalogo"
+                class="btn btn-primary"
+                value="Aceptar"
+                onclick="aceptarAltaCatalogo();"
+              />
+            </div>
+          </div>
+        </fieldset>
+      </form>
+      <form class="form-horizontal" name="frmEntradaStock" id="frmEntradaStock">
+        <fieldset>
+          <!-- Form Name -->
+          <legend>Entrada de Stock</legend>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-xs-4 control-label" for="txtMarca">Marca</label>
+            <div class="col-xs-4">
+              <input
+                id="txtMarca"
+                name="txtMarca"
+                placeholder="Marca"
+                class="form-control input-md"
+                type="text"
+              />
+            </div>
+          </div>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-xs-4 control-label" for="txtModelo">Modelo</label>
+            <div class="col-xs-4">
+              <input
+                id="txtModelo"
+                name="txtModelo"
+                placeholder="Modelo"
+                class="form-control input-md"
+                type="text"
+              />
+            </div>
+          </div>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-xs-4 control-label" for="txtUnidades">Unidades añadidas</label>
+            <div class="col-xs-4">
+              <input
+                id="txtUnidades"
+                name="txtUnidades"
+                placeholder="Unidades"
+                class="form-control input-md"
+                type="text"
+              />
+            </div>
+          </div>
+
+          <!-- Input Button -->
+          <div class="form-group">
+            <label class="col-xs-4 control-label" for="btnAceptarEntradaStock"></label>
+            <div class="col-xs-4">
+              <input
+                type="button"
+                id="btnAceptarEntradaStock"
+                name="btnAceptarEntradaStock"
+                class="btn btn-primary"
+                value="Aceptar"
+                onclick="aceptarEntradaStock();"
+              />
+            </div>
+          </div>
+        </fieldset>
+      </form>
+
+      <form class="form-horizontal" name="frmSalidaStock" id="frmSalidaStock">
+        <fieldset>
+          <!-- Form Name -->
+          <legend>Salida de Stock</legend>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-xs-4 control-label" for="txtMarca">Marca</label>
+            <div class="col-xs-4">
+              <input
+                id="txtMarca"
+                name="txtMarca"
+                placeholder="Marca"
+                class="form-control input-md"
+                type="text"
+              />
+            </div>
+          </div>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-xs-4 control-label" for="txtModelo">Modelo</label>
+            <div class="col-xs-4">
+              <input
+                id="txtModelo"
+                name="txtModelo"
+                placeholder="Modelo"
+                class="form-control input-md"
+                type="text"
+              />
+            </div>
+          </div>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-xs-4 control-label" for="txtUnidades">Unidades eliminadas</label>
+            <div class="col-xs-4">
+              <input
+                id="txtUnidades"
+                name="txtUnidades"
+                placeholder="Unidades"
+                class="form-control input-md"
+                type="text"
+              />
+            </div>
+          </div>
+
+          <!-- Input Button -->
+          <div class="form-group">
+            <label class="col-xs-4 control-label" for="btnAceptarSalidaStock"></label>
+            <div class="col-xs-4">
+              <input
+                type="button"
+                id="btnAceptarSalidaStock"
+                name="btnAceptarSalidaStock"
+                class="btn btn-primary"
+                value="Aceptar"
+                onclick="aceptarSalidaStock();"
+              />
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <script src="js/objetos.js"></script>
+    <script src="js/codigo.js"></script>
+  </body>
+</html>
