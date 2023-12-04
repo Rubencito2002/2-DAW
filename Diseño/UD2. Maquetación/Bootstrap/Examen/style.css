@@ -1,0 +1,35 @@
+#fondo
+{
+    background-image: url('banner.jpg');
+    background-repeat: no-repeat;
+    width: auto;
+    height: auto;
+    opacity: 75%;
+}
+
+#formulario
+{
+    border-radius: 1%;
+    border: #fff solid;
+    padding: 10px;
+}
+
+#formulario h1
+{
+    color: red;
+}
+
+#formulario p
+{
+    color: #2e2d2d;
+}
+
+#noFormulario p
+{
+    color: #fff;
+}
+
+#noFormulario h1
+{
+    color: #fff;
+}
