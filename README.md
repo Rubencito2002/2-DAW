@@ -7,7 +7,8 @@
 #### UD3. Utilización de objetos predefinidos de javascript y arrays 
 #### UD4. Programación con objetos definidos por el usuario 
 ### Bloque II
-#### UD5. 
+#### UD5. Interacción con el usuario. Eventos y formularios
+#### UD6. 
 
 
 ## Desarrollo Entorno Servidor
