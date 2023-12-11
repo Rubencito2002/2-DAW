@@ -1,0 +1,1 @@
+// Dado el formulario con los datos de tres actores seleccionables mediante un radiobutton, añadir un manejador de eventos al botón para que al pulsar sobre él muestre por consola los datos del actor seleccionado.

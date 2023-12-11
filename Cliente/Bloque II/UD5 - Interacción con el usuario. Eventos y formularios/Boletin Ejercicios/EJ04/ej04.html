@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 04</title>
+  </head>
+  <body>
+    <h1 id="titulo">Añadir provincias y moverlas entre las dos listas</h1>
+    <form id="frmEntrada" name="frmEntrada">
+      <label>Código de provincia</label>
+      <input type="text" name="txtCodigo" id="txtCodigo" />
+      <br />
+      <label>Provincia</label>
+      <input type="text" name="txtProvincia" id="txtProvincia" />
+      <br />
+      <input
+        type="button"
+        name="btnAgregar"
+        id="btnAgregar"
+        onclick="agregarProvincia();"
+        value="Agregar provincia"
+      />
+
+      <br />
+      <br />
+      <select name="lstProvincias" id="lstProvincias" multiple></select>
+
+      <span style="display: inline-flex; flex-direction: column-reverse">
+        <input
+          type="button"
+          name="btnPasarDerecha"
+          id="btnPasarDerecha"
+          onclick="pasarDerecha();"
+          value="➡️"
+        />
+        <input
+          type="button"
+          name="btnPasarIzquierda"
+          id="btnPasarIzquierda"
+          onclick="pasarIzquierda();"
+          value="⬅️"
+        />
+      </span>
+
+      <select name="lstDestino" id="lstDestino" multiple></select>
+    </form>
+    <script src="./ej04.js"></script>
+  </body>
+</html>

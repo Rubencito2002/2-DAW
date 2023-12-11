@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The Document Object</h1>
+<h2>The forms Property</h2>
+
+<p><form id="myCarForm">
+Favorite Car: <input type="text" name="fname" value="Volvo">
+</form></p>
+
+<p><form id="myColorForm">
+Favorite Color: <input type="text" name="favcolor" value="Blue">
+</form></p>
+
+<p>The id of the first form element is:</p>
+<p id="demo"></p>
+
+<script>
+let id = document.forms[1].favcolor.value;
+document.getElementById("demo").innerHTML = id;
+</script>
+
+</body>
+</html>
