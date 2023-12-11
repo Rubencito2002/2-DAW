@@ -1,0 +1,44 @@
+.btn{
+    background-color: #00A0D6;
+    padding: 30px;
+    transition: all 5s;
+    position: absolute;
+    overflow: hidden;
+}
+
+.top{
+    top: 0;
+}
+
+.bottom{
+    top: 200px;
+}
+
+.content{
+    position: relative;
+}
+
+.btn:hover{
+    background-color: red;
+    color: yellow;
+    font-size: 50px;
+}
+
+.btn:hover .top{
+    top: -200px;
+}
+
+.btn:hover .bottom{
+    top: 0;
+}
+
+.modal{
+    visibility: hidden;
+    opacity: 0;
+    transition: all .5s;
+}
+
+.modal:hover{
+    opacity: 1;
+    visibility: visible;
+}
