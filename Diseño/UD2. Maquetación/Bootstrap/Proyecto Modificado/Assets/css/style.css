@@ -5,27 +5,9 @@ body
     color: #272829;
 }
 
-a
-{
-    color: #149ddd;
-    text-decoration: none;
-}
-
-a:hover
-{
-    color: #37b3ed;
-    text-decoration: none;
-}
-
 h1, h2, h3, h4, h5, h6
 {
     font-family: 'Raleway', sans-serif;
-}
-
-p
-{
-    font-family: sans-serif;
-    color: #272829;
 }
 
 section
@@ -66,25 +48,7 @@ section
     left: 0;
 }
 
-.section_title p
-{
-    margin-bottom: 0;
-}
-
 /*** Estilos de Menu ***/
-#header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 300px;
-    transition: all ease-in-out 0.5s;
-    z-index: 9997;
-    transition: all 0.5s;
-    padding: 0 15px;
-    overflow-y: auto;
-}
-
 #header .perfil img {
     margin: 15px auto;
     display: block;
@@ -97,13 +61,7 @@ section
     margin: 0;
     padding: 0;
     font-weight: 600;
-    -moz-text-align-last: center;
-    text-align-last: center;
-}
-
-#header .perfil h1 a, #header .perfil h1 a:hover{
-    color: #fff;
-    text-decoration: none;
+    text-align: center;
 }
 
 #header .fondoMenu
@@ -124,13 +82,6 @@ section
     text-align: center;
     width: 36px;
     height: 36px;
-    transition: 0.3s;
-}
-
-#header .perfil .social a:hover{
-    background: #149ddd;
-    color: #fff;
-    text-decoration: none;
 }
 
 .menu-button {
@@ -138,7 +89,6 @@ section
     border: none;
     color: white;
     border-radius: 50%;
-    cursor: pointer;
     font-size: 1.5rem;
     /* Tamaño del texto */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -148,40 +98,18 @@ section
 }
 
 /**** Menu de Navegacion ****/
-.menu {
-    padding: 30px 0 0 0;
-}
-
-.menu * {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.menu>ul>li {
-    position: relative;
-    white-space: nowrap;
-}
-
-.menu a, .menu a:focus {
-    display: flex;
+.menu a {
     align-items: center;
     color: #a8a9b4;
     padding: 12px 15px;
     margin-bottom: 8px;
-    transition: 0.3s;
     font-size: 15px;
 }
 
-.menu a i, .menu a:focus i {
+.menu a i{
     font-size: 24px;
     padding-right: 8px;
     color: #6f7180;
-}
-
-.menu a:hover, .menu .active, .menu .active:focus, .menu li:hover>a {
-    text-decoration: none;
-    color: #fff;
 }
 
 .menu a:hover i, .menu .active i, .menu .active:focus i, .menu li:hover>a i {
@@ -197,19 +125,10 @@ section
     height: 100vh;
 }
 
-#hero .hero_cont
-{
-    position: relative;
-    z-index: 2;
-    min-width: 300px;
-}
-
 #hero h1
 {
     margin: 0 0 10px 0;
     font-size: 64px;
-    font-weight: 700;
-    line-height: 56px;
     color: #fff;
 }
 
@@ -220,69 +139,40 @@ section
     font-size: 26px;
 }
 
-#hero p span
-{
-    color: #fff;
-    padding-bottom: 4px;
-    letter-spacing: 1px;
-    border-bottom: 3px solid #149ddd;
-}
-
 /*** Estilos de About ***/
-
 #about li
 {
     list-style-image: url('../img/chevron-right.svg');
 }
 
 /*** Estilos de Facts ***/
-.facts {
-    padding-bottom: 30px;
-}
-
 .facts .count-box {
     padding: 30px;
     width: 100%;
 }
 
 .facts .count-box i {
-    display: block;
     font-size: 44px;
     color: #149ddd;
     float: left;
-    line-height: 0;
 }
 
 .facts .count-box span {
     font-size: 48px;
-    line-height: 40px;
-    display: block;
-    font-weight: 700;
     color: #050d18;
-    margin-left: 60px;
 }
 
 .facts .count-box p {
     padding: 15px 0 0 0;
     margin: 0 0 0 60px;
-    font-family: "Raleway", sans-serif;
     font-size: 14px;
     color: #122f57;
 }
 
 .facts .count-box a {
-    font-weight: 600;
-    display: block;
     margin-top: 20px;
     color: #122f57;
     font-size: 15px;
-    font-family: "Poppins", sans-serif;
-    transition: ease-in-out 0.3s;
-}
-
-.facts .count-box a:hover 
-{
-    color: #1f5297;
 }
 
 /*** Estilos de Skills ***/
@@ -297,15 +187,11 @@ section
     padding: 0;
     margin: 0 0 6px 0;
     text-transform: uppercase;
-    display: block;
-    font-weight: 600;
-    font-family: "Poppins", sans-serif;
     color: #050d18;
 }
 
-.skills .progress .skill .val {
+.skill .val {
     float: right;
-    font-style: normal;
 }
 
 .skills .progress-bar-wrap {
@@ -316,14 +202,12 @@ section
 .skills .progress-bar {
     width: 1px;
     height: 10px;
-    transition: 0.9s;
     background-color: #149ddd;
 }
 
 /*** Estilos de Resume ***/
 .resume .resume_title {
     font-size: 26px;
-    font-weight: 700;
     margin-top: 20px;
     margin-bottom: 20px;
     color: #050d18;
@@ -337,11 +221,8 @@ section
 }
 
 .resume .resume_item h4 {
-    line-height: 18px;
     font-size: 18px;
-    font-weight: 600;
     text-transform: uppercase;
-    font-family: "Poppins", sans-serif;
     color: #050d18;
     margin-bottom: 10px;
 }
@@ -351,7 +232,6 @@ section
     background: #e4edf9;
     padding: 5px 15px;
     display: inline-block;
-    font-weight: 600;
     margin-bottom: 10px;
 }
 
@@ -380,10 +260,6 @@ section
 }
 
 /*** Estilos de Services ***/
-.services .icon-box {
-    margin-bottom: 20px;
-}
-
 .services .icon {
     float: left;
     display: flex;
@@ -393,27 +269,16 @@ section
     height: 54px;
     background: #149ddd;
     border-radius: 50%;
-    transition: 0.5s;
     border: 1px solid #149ddd;
 }
 
 .services .icon i {
     color: #fff;
     font-size: 24px;
-    line-height: 0;
-}
-
-.services .icon-box:hover .icon {
-    background: #fff;
-}
-
-.services .icon-box:hover .icon i {
-    color: #149ddd;
 }
 
 .services .title {
     margin-left: 80px;
-    font-weight: 700;
     margin-bottom: 15px;
     font-size: 18px;
 }
@@ -422,13 +287,8 @@ section
     color: #343a40;
 }
 
-.services .title a:hover {
-    color: #149ddd;
-}
-
 .services .description {
     margin-left: 80px;
-    line-height: 24px;
     font-size: 14px;
 }
 
@@ -550,7 +410,6 @@ iframe{
     justify-content: center;
     align-items: center;
     border-radius: 50px;
-    transition: all 0.3s ease-in-out;
 }
 
 .contact .info h4 {
@@ -587,20 +446,7 @@ iframe{
     text-align: center;
     width: 36px;
     height: 36px;
-    transition: 0.3s;
     margin-right: 10px;
-}
-
-.contact .info .social-links a:hover {
-    background: #149ddd;
-    color: #fff;
-}
-
-.contact .info .email:hover i,
-.contact .info .address:hover i,
-.contact .info .phone:hover i {
-    background: #149ddd;
-    color: #fff;
 }
 
 .contact .email_form {
@@ -660,7 +506,6 @@ iframe{
     margin: 0 10px -6px 0;
     border: 3px solid #18d26e;
     border-top-color: #eee;
-    animation: animate-loading 1s linear infinite;
 }
 
 .contact .email_form .form-group {
@@ -686,17 +531,12 @@ iframe{
     padding: 10px 15px;
 }
 
-.contact .email_form button[type=submit] {
+.contact .email_form button {
     background: #149ddd;
     border: 0;
     padding: 10px 24px;
     color: #fff;
-    transition: 0.4s;
     border-radius: 4px;
-}
-
-.contact .email_form button[type=submit]:hover {
-    background: #37b3ed;
 }
 
 /*** Estilos de Footer ***/
@@ -704,10 +544,6 @@ iframe{
 {
     background-color: #050d18;
     padding: 20px;
-}
-
-#campoVacio
-{
     margin-bottom: 10px;
     height: 20px;
 }
@@ -715,30 +551,15 @@ iframe{
 /*** Estilo del Boton de Volver ***/
 .botonVolver {
     position: fixed;
-    visibility: hidden;
-    opacity: 0;
     right: 15px;
     bottom: 15px;
-    z-index: 996;
     background: #149ddd;
     width: 40px;
     height: 40px;
     border-radius: 50px;
-    transition: all 0.4s;
 }
 
 .botonVolver i {
     font-size: 28px;
     color: #fff;
-    line-height: 0;
-}
-
-.botonVolver:hover {
-    background: #2eafec;
-    color: #fff;
-}
-
-.botonVolver.active {
-    visibility: visible;
-    opacity: 1;
 }
