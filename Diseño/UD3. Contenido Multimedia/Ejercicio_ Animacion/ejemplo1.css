@@ -57,3 +57,16 @@
     outline: 20px solid;
     outline-color: gray;
 }
+
+.retrogrado{
+    width: 30%;
+    transform-origin: bottom left;
+    transition: all 10s;
+}
+
+.retrogrado:hover
+{
+    /*transform: rotate(5turn);
+    width: 100%;*/
+    transform: scale(4,-9);
+}
