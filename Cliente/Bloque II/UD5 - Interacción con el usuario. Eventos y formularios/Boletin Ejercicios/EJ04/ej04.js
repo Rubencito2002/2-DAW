@@ -11,6 +11,9 @@ function agregarProvincia()
         opcion.value = codigo;
         opcion.text = provincia;
         lista.add(opcion);
+        
+        document.getElementById('txtCodigo').value = "";
+        document.getElementById('txtProvincia').value = "";
     }    
 }
 
