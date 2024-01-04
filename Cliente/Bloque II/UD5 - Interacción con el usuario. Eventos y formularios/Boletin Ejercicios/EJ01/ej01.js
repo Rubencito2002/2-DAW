@@ -6,8 +6,7 @@ function mostrarDatos()
         {
             if (actor.checked) 
             {
-                actorSeleccionado = radio.value;
-                break;
+                console.log(actor.value);
             }
         }
 }
