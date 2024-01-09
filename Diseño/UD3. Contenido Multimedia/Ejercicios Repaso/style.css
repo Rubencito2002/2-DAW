@@ -1,0 +1,91 @@
+
+/* CSS para las imagenes de del picture */
+picture {
+  width: 250px;
+}
+  
+/* CSS DEL VIDEO CON MEDIA */
+video {
+    width: 600px;
+    height: 400px;
+}
+
+/* PONER TAMAÑO PERSONALIZADO PARA CADA VIDEO
+@media (min-width: 768px) {
+    video {
+        width: 600px;
+        height: 400px;
+    }
+}
+  
+@media (min-width: 992px) {
+    video {
+        width: 700px;
+        height: 400px;
+    }
+}
+  
+@media (min-width: 1200px) {
+    video {
+        width: 800px;
+        height: 400px;
+    }
+}
+*/
+
+/*  Css necesario para implementarlo al boton y que se vea de la manera deseada  */
+.btn {
+	color: white;
+ 	background-color: blue;
+ 	border-radius: 20px;
+    transition: all 1s;
+}
+
+.btn:hover{
+  	background-color: red;
+}
+
+/*  CSS para que la foto o png sea giratorio   */
+.morsa-giratoria{
+ 	width: 40px;
+ 	top: 0 ;
+  	position: absolute;
+  	transition: transform 5s;
+}
+
+.morsa-giratoria:hover{
+	transform: rotate(10turn);
+}
+
+.posicion{
+	position: relative;
+}
+
+/* CSs para que la foto o png sea aumentada */
+.morsa-encima{
+ 	top: 0 ;
+ 	width: 40px;
+ 	position: absolute;
+ 	transition: all 5s;
+}
+
+.morsa-encima:hover
+{
+ 	width: 200px;
+}
+
+/* A partir de aqui es el uso en css de un keyframe */
+#gato 
+{
+ 	width: 200px;
+  	animation: acelerate 3s linear infinite forwards;
+}
+
+@keyframes acelerate {
+  	from{
+     	transform: translateX(-100vw) scaleX(1);
+    	}
+    to{
+     	transform: translateX(150vw) scaleX(1);
+   	  }  
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+
+        <title>Ejemplos</title>
+        <link href="/Ejemplos Ventura/style.css" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body>
+        <h2>PICTURE - IMAGENES QUE CAMBIAN</h2>
+        <div>
+            <!--  Codigo necesario para las imagenes-->
+            <picture>
+                <source media="(min-width: 1200px)" srcset="https://media.es.wired.com/photos/6501e7429fa9000811a95fe8/16:9/w_2560%2Cc_limit/Adobe%2520Firefly.jpeg" />
+                <source media="(min-width: 992px)" srcset="https://img.freepik.com/foto-gratis/leon-melena-arcoiris-ojos-azules_1340-39421.jpg" />
+                <source media="(min-width: 768px)" srcset="https://images.unsplash.com/reserve/Af0sF2OS5S5gatqrKzVP_Silhoutte.jpg?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8fA%3D%3D" />
+
+                <img src="https://ichef.bbci.co.uk/news/640/cpsprodpb/4fef/live/26f28080-6ad1-11ee-8073-5b93bd1aa7db.jpg" alt="Descripción de la imagen"/>
+            </picture>
+        </div>
+        
+        <h2>VIDEO</h2>
+        <div>
+            <video controls="controls">  <!--  Solo con el controls sin ="" se ponen los controles necesarios para un video -->
+                <source src="videoIphone.mp4" type="video/mp4" />
+            </video>
+        </div>
+
+        <h2>AUDIO</h2>
+        <div>
+            <!--  Codigo necesario para los audios-->
+            <audio controls="controls" autoplay>  <!-- El autoplay hace que el video se reproduzca de manera automatica nada mas cargar la pagina y al volverla a recargar vuelve a ponerse desde el principio -->
+                <source src="The Awakening.mp3" type="audio/mp3" />
+            </audio>
+        </div>
+
+        <h2>BOTON CAMBIA DE COLOR</h2>
+        <div>
+            <!--  Elemento necesario para crear un boton(transicion) --> 
+            <a href="#" class="btn"> C O M P R A </a>
+        </div>
+
+        <h2>IMAGEN QUE GIRA - RELATIVE</h2>
+        <!--  Elemento necesario en el html para poner un icono deseado  -->
+        <div class="posicion">
+            <img src="SANS NAVIDEÑO.png" class="morsa-giratoria" />  <!--  Al ser giratoria en el css debes poner el siguiente codigo  -->
+        </div>
+
+        <br><br>
+
+        <h2>IMAGEN TAMAÑO CAMBIA</h2>
+        <div class="posicion">
+            <img src="FNAF LOGO.png" class="morsa-encima" /></div>
+        </div>
+
+        <br><br>
+
+        <h2>KEYFRAME - IZQUIERDA A DERECHA INFINITO</h2>
+        <!--  Imagen o uso de un keyframe    -->
+        <div>
+            <img src="DOOM 1.png" id="gato" />
+        </div>
+    </body>
+</html>
