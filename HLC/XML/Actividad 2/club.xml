@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE club SYSTEM "club.dtd">
+<club>
+    <personal>
+        <persona genero="h" id="1">
+            <nombre-completo>
+                <nombre>Alberto</nombre>
+                <apellido1>Ruiz</apellido1>
+            </nombre-completo>
+            <telefono>650596413</telefono>
+            <telefono>609453423</telefono>   
+            <correo>aruiz@gmail.com</correo>
+            <correo>aruiz@hotmail.com</correo>
+            <socio>Si</socio>
+        </persona>
+        <persona genero="v" id="2">
+            <nombre-completo>
+                <nombre>Antonio</nombre>
+                <apellido1>Perez</apellido1>
+                <apellido2>Chicon</apellido2>
+            </nombre-completo>
+            <correo>aperez@gmail.com</correo>
+            <socio>No</socio>
+        </persona>
+    <personal>
+</club>

@@ -1,0 +1,9 @@
+<!ELEMENT empresa (trabajadores)+>
+<!ELEMENT trabajadores (trabajador)+>
+<!ELEMENT trabajador (departamento, nombre, apellidos, cargo+, telefono-movil+, telefono-fijo?)>
+<!ELEMENT departamento (#PCDATA)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellidos (#PCDATA)>
+<!ELEMENT cargo (#PCDATA)>
+<!ELEMENT telefono-fijo (#PCDATA)>
+<!ELEMENT telefono-movil (#PCDATA)>
