@@ -10,28 +10,28 @@
     <h1>Validación de formularios con expresiones regulares</h1>
     <form action="formularioProcesado.html" name="formulario">
       <label>Apellidos: </label>
-      <input type="text" name="apellidos" required pattern="^[A-ZÁÉÍÓÚÜÑ][a-záéíóúüñ]*(\s[A-ZÁÉÍÓÚÜÑ][a-záéíóúüñ]*)*$"/>
+      <input type="text" name="apellidos" required pattern="^[A-ZÁÉÍÓÚÜÑ][a-záéíóúüñ]*(\s[A-ZÁÉÍÓÚÜÑ][a-záéíóúüñ]*)*"/>
       <br />
       <label>Nombre: </label>
-      <input type="text" name="nombre" required pattern="^[A-ZÁÉÍÓÚÜÑ][a-záéíóúüñ]*(\s[A-ZÁÉÍÓÚÜÑ][a-záéíóúüñ]*)*$"/>
+      <input type="text" name="nombre" required pattern="^[A-ZÁÉÍÓÚÜÑ][a-záéíóúüñ]*(\s[A-ZÁÉÍÓÚÜÑ][a-záéíóúüñ]*)*"/>
       <br />
       <label>Fecha de nacimiento: </label>
-      <input type="text" name="fechaNacimiento" placeholder="DD/MM/AAAA" required pattern="^\d{2}\/\d{2}\/\d{2,4}$"/>
+      <input type="text" name="fechaNacimiento" placeholder="DD/MM/AAAA" required pattern="\d\d\/\d\d\/\d\d\d\d"/>
       <br />
       <label>DNI: </label>
-      <input type="text" name="dni" required pattern="^\d{7,8}[A-Z]$"/>
+      <input type="text" name="dni" required pattern="^[0-9]{7,8}[A-Z]$"/>
       <br />
       <label>Correo electrónico: </label>
-      <input type="text" name="email" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"/>
+      <input type="text" name="email" required pattern="^[a-z\.\-_]+@[a-z\-_]+\.[a-z]{2,4}"/>
       <br />
       <label>Usuario IDEA: </label>
-      <input type="text" name="usuario" required pattern="^[a-hj-z]{7}\d{3}$"/>
+      <input type="text" name="usuario" required pattern="^[a-z]{7}[0-9]{3}$"/>
       <br />
       <label>Teléfono: </label>
-      <input type="text" name="telefono" required pattern="^[6-9]\d{8}$"/>
+      <input type="text" name="telefono" required pattern="^[6789][0-9]{8}$"/>
       <br />
       <label>Usuario de Twitter: </label>
-      <input type="text" name="twitter" required pattern="^@[\w]{4,15}$"/>
+      <input type="text" name="twitter" required pattern="^@[a-zA-Z0-9_]{4,15}$"/>
       <br />
       <input type="submit" name="submit" value="Procesar Formulario" />
     </form>
