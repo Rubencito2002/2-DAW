@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <style>
+        .caja {
+            border: medium blue solid;
+            width: 200px;
+            height: 400px;
+            margin: 5px;
+            padding: 5px;
+            float: left;
+        }
+        
+        .cajaTriple {
+            border: medium blue solid;
+            width: 600px;
+            height: 400px;
+            margin: 5px;
+            padding: 5px;
+            float: left;
+        }
+    </style>
+    <title>Ejercicio 11</title>
+</head>
+
+<body>
+    <h3>Ejercicio 11 - Manejo DOM completo (Examen)</h3>
+    <div id="contenedor">
+        <br/>
+        <div id="listas" class="caja">
+            <ul>
+                <li> <span>Aprobados</span>
+                    <ul id="aprobados">
+                        <li>Alumno 1</li>
+                        <li>Alumno 2</li>
+                        <li>Alumno 3</li>
+                        <li>Alumno 4</li>
+                        <li>Alumno 5</li>
+                    </ul>
+                </li>
+                <li> <span>A recuperacion</span>
+                    <ul id="recuperacion">
+                        <li>Alumno 6</li>
+                        <li>Alumno 7</li>
+                        <li>Alumno 8</li>
+                        <li>Alumno 9</li>
+                        <li>Alumno 10</li>
+                    </ul>
+                </li>
+                <li> <span>A repetir</span>
+                    <ul id="repetir">
+                        <li>Alumno 11</li>
+                        <li>Alumno 12</li>
+                        <li>Alumno 13</li>
+                        <li>Alumno 14</li>
+                        <li>Alumno 15</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div id="controles" class="caja">
+            <h3>Al hacer click mover a...</h3>
+            <input type="radio" name="tipo" value="aprob" checked="checked">Aprobados</input>
+            <br/>
+            <input type="radio" name="tipo" value="recup">A recuperacion</input>
+            <br/>
+            <input type="radio" name="tipo" value="repet">A repetir</input>
+            <br/>
+            <br/>
+            <h3>y poner como...</h3>
+            <select id="combo">
+				<option value="primero">Primero de la lista</option>
+				<option value="ultimo">Ultimo de la lista</option>
+			</select>
+            <br/>
+            <br/>
+            <button id="btnCrearTablas">Crear tablas</button>
+            <br/>
+            <br/>
+            <button id="btnBorrarTablas">Borrar tablas</button>
+        </div>
+
+        <div id="tablas" class="caja"></div>
+
+    </div>
+    <script src="./ej11.js"></script>
+</body>
+
+</html>

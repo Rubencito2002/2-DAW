@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 09</title>
+  </head>
+  <body>
+    <h1>Generar un código captcha para procesar un formulario</h1>
+    <form action="ej09-FormularioProcesado.html" name="formulario" method="get">
+      <label>Usuario: </label>
+      <input type="text" name="usuario" required /> <br />
+      <label>Contraseña: </label>
+      <input type="password" name="password" required /> <br /><br />
+      <label id="captcha" for="verify">Pase el ratón por aquí para ver el código captcha</label>
+      <p id="code" style="visibility: hidden">codigo</p>
+      <br /><br />
+      <label>Introduzca el código captcha actual: </label>
+      <input type="text" id="verify" name="verify" required /> <br />
+      <input type="submit" name="btnLogin" value="Entrar" />
+      <input type="reset" name="btnCancelar" value="Cancelar" /> <br /><br />
+    </form>
+    <script src="./ej09.js"></script>
+  </body>
+</html>

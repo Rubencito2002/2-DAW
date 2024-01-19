@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<link  href="css/ej12.css" rel="stylesheet" type="text/css"/>
+	<title>Ejercicio 12</title>
+</head>
+<body>
+	<h3>Ejercicio 12 - Manejo DOM completo (Examen)</h3>
+	<div id="cont1" class="contenedor">
+			<h3>Contenedor 1</h3>
+			<img id="p-img-0" src="img/imagen-0.gif" alt="Imagen de la galeria" />
+			<img id="p-img-1" src="img/imagen-1.gif" alt="Imagen de la galeria" />
+			<img id="p-img-2" src="img/imagen-2.gif" alt="Imagen de la galeria" />
+			<img id="p-img-3" src="img/imagen-3.gif" alt="Imagen de la galeria" />
+			<img id="p-img-4" src="img/imagen-4.gif" alt="Imagen de la galeria" />
+			<img id="p-img-5" src="img/imagen-5.gif" alt="Imagen de la galeria" />
+			<img id="p-img-6" src="img/imagen-6.gif" alt="Imagen de la galeria" />
+			<img id="p-img-7" src="img/imagen-7.gif" alt="Imagen de la galeria" />
+			<img id="p-img-8" src="img/imagen-8.gif" alt="Imagen de la galeria" />
+			<img id="p-img-9" src="img/imagen-9.gif" alt="Imagen de la galeria" />
+			<img id="p-img-10" src="img/imagen-10.gif" alt="Imagen de la galeria" />
+	</div>
+
+	<div id="cont2" class="contenedor">
+		<h3>Contenedor 2</h3>
+	</div>
+	<div id="cont3" class="contenedor">
+		<h3>Contenedor 3</h3>
+	</div>
+
+	<div id="cont4" class="contenedor">
+		<h3>Destino</h3>
+	    <input type="radio" name="sitio"  value="cont1">Contenedor 1<br>
+	    <input type="radio" name="sitio"  value="cont2">Contenedor 2<br>
+	    <input type="radio" name="sitio"  value="cont3" checked="checked">Contenedor 3<br>
+		
+		<h3>Posición</h3>
+		<input type="radio" name="lugar" value="first" checked="checked">Primer lugar</input>
+	    <br>
+		<input type="radio" name="lugar" value="last">Último lugar</input>
+	    
+		<h3>¿Clonar?</h3>
+		<input type="checkbox" name="clonar">Clonar</input> 
+	    <br> <br>
+	    <input type="button" id="btnAplicar" value="Aplicar"/>
+	    <input type="button" id="btnBorrar" value="Borrar"/>
+	</div>
+	<script src="js/ej12.js"></script>
+</body>
+</html>
