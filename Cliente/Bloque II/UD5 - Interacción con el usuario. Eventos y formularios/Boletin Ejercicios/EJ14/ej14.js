@@ -4,7 +4,7 @@ function validarFormulario(event) {
     const regExpApellidosNombre = /^[A-ZÑÁÉÍÓÚ][a-zñáéíóú]*(s[A-ZÑÁÉÍÓÚ][a-zñáéíóú]*)*/;
     const regExpFechaNac = /\d\d\/\d\d\/\d\d\d\d/;
     const regExpDni = /^[0-9]{7,8}[A-Z]$/;
-    const regExpEmail = /^[a-z\.\-_]+@[a-z\-_]+\.[a-z]{2,4}$/;
+    const regExpEmail = /^[a-z\.\-_]+@[a-z\-_]+\.[a-z]{2,4}/;
     const regExpUsuarioIdea = /^[a-z]{7}[0-9]{3}$/;
     const regExpTelefono = /^[6789][0-9]{8}$/;
     const regExpTwitter = /^@[a-zA-Z0-9_]{4,15}$/;
