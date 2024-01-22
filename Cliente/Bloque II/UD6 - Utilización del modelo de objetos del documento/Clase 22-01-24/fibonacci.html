@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fibonacci</title>
+    </head>
+    <body>
+        <h1>Secuencia de Fibonacci</h1>
+        <h2>Con bucle:</h2>
+        <pre id="resultadoBucle"></pre>
+        <h2>Con recursión:</h2>
+        <pre id="resultadoRecursion"></pre>
+        <script>
+            function fibonacciConBucle(n) {
+                let fib = [0, 1];
+        
+                for (let i = 2; i <= n; i++) {
+                    fib[i] = fib[i - 1] + fib[i - 2];
+                }
+        
+                return fib;
+            }
+    
+            function fibonacciConRecursion(n) {
+                if (n <= 1) {
+                    return n;
+                }
+        
+                return fibonacciConRecursion(n - 1) + fibonacciConRecursion(n - 2);
+            }
+
+            const n = 10;
+        
+            // Calcular Fibonacci con bucle
+            const resultadoBucle = fibonacciConBucle(n);
+            document.getElementById('resultadoBucle').textContent = JSON.stringify(resultadoBucle);
+        
+            // Calcular Fibonacci con recursión
+            const resultadoRecursion = [];
+            for (let i = 0; i <= n; i++) {
+                resultadoRecursion.push(fibonacciConRecursion(i));
+            }
+            document.getElementById('resultadoRecursion').textContent = JSON.stringify(resultadoRecursion);
+        </script>
+    </body>
+</html>
