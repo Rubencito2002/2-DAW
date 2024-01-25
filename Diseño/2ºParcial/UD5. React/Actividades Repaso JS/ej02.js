@@ -8,9 +8,9 @@ function esPalindromo(cadena)
 
 if (esPalindromo(cadena))
 {
-    console.log('¡La cadena es un palindromo!');
+    alert('¡La cadena es un palindromo!');
 }
 else
 {
-    console.log('¡La cadena no es un palindromo!');
+    alert('¡La cadena no es un palindromo!');
 }
