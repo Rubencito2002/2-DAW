@@ -29,5 +29,4 @@ function resetearEstilo()
     for(let fila of tabla.rows)
         for(let celda of fila.cells)
             celda.style.backgroundColor = "";
-        
 }
