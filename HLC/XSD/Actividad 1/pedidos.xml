@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="pedidos.xsd">
+    <recepcion>
+        <producto> Producto1 </producto>
+        <cantidad> 5 </cantidad>
+        <codigoReceptor> 123-ABC </codigoReceptor>
+    </recepcion>
+    <entrega receptor='Receptor1'>
+        <transportista> T1 </transportista>
+        <distancia unidad='kilometros'> 50 </distancia>
+        <coste> 100 </coste>
+    </entrega>
+    <recepcion>
+        <producto> Producto2 </producto>
+        <cantidad> 3 </cantidad>
+    </recepcion>
+</portes>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <title>EJERCICIO 2</title>
+    <link href="css/estilos.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <h3>Ejercicio 2 - EXAMEN BLOQUE II - 12/02/2024</h3>
+    <div id="origen" class="contenedor">
+      <h2>ORIGEN</h2>
+      <div>
+        <input type="checkbox" name="seleccionImagen" /><br />
+        <img src="img/imagen01.jpg" alt="seleccion 1" />
+      </div>
+      <div>
+        <input type="checkbox" name="seleccionImagen" /><br />
+        <img src="img/imagen02.jpg" alt="seleccion 2" />
+      </div>
+      <div>
+        <input type="checkbox" name="seleccionImagen" /><br />
+        <img src="img/imagen03.jpg" alt="seleccion 3" />
+      </div>
+    </div>
+    <div class="contenedor">
+      <h2>DESTINO</h2>
+      <div>
+        <div id="destino">
+          <div id="capa1" class="capasDestino">
+            <label><input type="radio" name="destinos" /> Capa 1</label>
+          </div>
+          <div id="capa2" class="capasDestino">
+            <label><input type="radio" name="destinos" /> Capa 2</label>
+          </div>
+          <div id="capa3" class="capasDestino">
+            <label><input type="radio" name="destinos" /> Capa 3</label>
+          </div>
+          <div id="capa4" class="capasDestino">
+            <label><input type="radio" name="destinos" /> Capa 4</label>
+          </div>
+          <div>
+            <span>OPERACIÓN:</span><br />
+            <label
+              ><input type="radio" name="aplicarFuncion" value="append" checked="checked" />
+              append</label
+            >
+            <label><input type="radio" name="aplicarFuncion" value="prepend" /> prepend</label>
+            <label><input type="radio" name="aplicarFuncion" value="before" /> before</label>
+            <label><input type="radio" name="aplicarFuncion" value="after" /> after</label>
+          </div>
+          <div>
+            <span>CLONAR SELECCIÓN:</span><br />
+            <label
+              ><input type="radio" name="clonarImagen" value="no" checked="checked" /> no</label
+            >
+            <label><input type="radio" name="clonarImagen" value="si" /> si</label>
+          </div>
+        </div>
+        <div>
+          <button id="botonEjecutar">Ejecutar</button>
+          <button id="botonRestaurar">Restaurar</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="js/ejercicio2.js"></script>
+</html>

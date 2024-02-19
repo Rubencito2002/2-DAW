@@ -1,0 +1,89 @@
+.panel {
+  border: medium blue solid;
+  width: 450px;
+  height: 600px;
+  margin: 10px;
+  padding: 5px;
+  float: left;
+  text-align: center;
+}
+
+.cliente {
+  color: white;
+  font-size: 16px;
+  display: flex;
+  float: left;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-left: 20px;
+  margin-top: 15px;
+  width: 120px;
+  height: 120px;
+  box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+}
+.pagado {
+  background-color: blue;
+}
+.pendiente {
+  background-color: red;
+}
+
+.tecla {
+  width: 75px;
+  height: 75px;
+  font-size: 60px;
+  margin: 3px;
+  background-color: lightskyblue;
+}
+
+.modificador {
+  width: 25px;
+  height: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 3px;
+  background-color: lightskyblue;
+}
+
+select {
+  font-size: 17px;
+}
+
+table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+}
+
+thead th:nth-child(1) {
+  width: 18%;
+}
+
+thead th:nth-child(2) {
+  width: 8%;
+}
+
+thead th:nth-child(3) {
+  width: 8%;
+}
+
+thead th:nth-child(4) {
+  width: 54%;
+}
+
+thead th:nth-child(5) {
+  width: 12%;
+}
+
+td,
+th {
+  border: 1px solid black;
+  padding: 3px 5px;
+  text-align: center;
+}
+
+.boton {
+  background-color: lightskyblue;
+  margin-bottom: 5px;
+}

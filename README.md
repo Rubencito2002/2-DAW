@@ -12,6 +12,7 @@
 #### UD6. Utilización del modelo de objetos del documento
 
 ### Bloque III
+#### UD7. Desarrollo de aplicaciones web dinámicas
 
 ## Desarrollo Entorno Servidor
 ### UD1. Introducción: Arquitecturas y Herramientas
@@ -19,17 +20,24 @@
 ### UD2.2. Introducción a Django 
 ### UD3. Formularios
 ### UD4. Persistencia
+### UD5. MiddleWare
+### UD6. MVC y MVT
 
 ## Diseño Interface Web
 ### UD1. Planificación de Interface Grafica
 ### UD2. Maquetación
 ### UD3. Contenido Multimedia
+### UD4. Accesibilidad
+### UD5. Contenido Interactivo
 
 ## Despliegue de Aplicaciones Web
-### UD1. Despliegue de Aplicaciones Web con Docker
-### UD2. Documentacion y Sistemas de Control de Versiones
+### UD1. Despliegue de Aplicaciones Web con Docker.
+### UD2. Documentacion y Sistemas de Control de Versiones.
 ### UD3. Amazon Web Server (AWS)
+### UD4. Servicios de Red implicados en el despliegue de una Aplicación.
+### UD5. Instalación y administración de servidores de transferencia de archivos.
 
 ## Hora Libre Configuración
-### UD1. Reconocimiento de las características de lenguajes de marcas
-### UD2. Utilización de lenguajes de marcas en entornos web
+### HTML y CSS
+### XML
+### JSON

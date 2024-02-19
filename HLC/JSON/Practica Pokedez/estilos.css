@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 50px;
+}
+#searchInput {
+    padding: 8px;
+    margin-right: 10px;
+    font-size: 16px;
+}
+#searchButton {
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 16px;
+}
+#result {
+	margin-top: 20px;
+}
+
+.error{
+    color: red;
+    font-weight: bold;
+}

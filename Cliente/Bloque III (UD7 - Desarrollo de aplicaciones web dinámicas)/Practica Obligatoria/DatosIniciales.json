@@ -1,0 +1,154 @@
+{
+  "categorias": {
+    "-NqhOwWJthRncAolMzxR": "Aceites",
+    "-NqhPDlSO7E9xCPKzNgU": "Encurtidos",
+    "-NqhPRc-qhA0ihgEtChu": "Salsas"
+  },
+  "clientes": {
+    "-Nqj2Fot88r20MVZipj6": [
+      "Alimentación Millán",
+      "Supermercado La Guinda",
+      "Kiosko Callejón",
+      "Tienda Cantero",
+      "Ultramarinos Mérida",
+      "Alimentación Moreno",
+      "Cash El Hostelero"
+    ],
+    "-Nqj2Fou4ec5bKa_jUsJ": [
+      "Ultramarinos La Delicia",
+      "Supermercado La Esquinita",
+      "Alimentación Gómez",
+      "Supermercado El Veloz",
+      "Kiosko 24h Desavío",
+      "Tienda La Manchega",
+      "Ultramarinos Tajo",
+      "Alimentación Víctor"
+    ],
+    "-Nqj2Fov4VclV1BAa86t": [
+      "Alimentación Daniel",
+      "Cash El Puerto",
+      "Ultramarinos Claudia",
+      "Supermercado Nazareno",
+      "Alimentación Guzmán",
+      "Supermercado Superprecio",
+      "Kiosko La Espera",
+      "M&B Alimentación",
+      "Ultramarinos Vistabella"
+    ],
+    "-Nqj2Fov4VclV1BAa86u": [
+      "Kiosko La Lumbre",
+      "Tienda Abad",
+      "Ultramarinos Hernández",
+      "Alimentación Cervantes",
+      "Cash El Panal",
+      "CyR Alimentación",
+      "Supermercado Los Mosqueteros",
+      "Alimentación Carpanta",
+      "Supermercado El Percebe"
+    ]
+  },
+  "comerciales": {
+    "-NqizdyShqfLGO7cKKUi": "Carmen Gómez",
+    "-NqizdyShqfLGO7cKKUj": "Lucía Gil",
+    "-NqizdyUQNkK8ekmu_bt": "Andrés Martínez",
+    "-NqizdyWZPyvCaFRTsli": "Antonio Salinas"
+  },
+  "productos": {
+    "-Nqj3v5T1dkFsAZnaqr1": {
+      "idCategoria": 2,
+      "idProducto": 13,
+      "nombreProducto": "Salsa Cocktail 350gr (Caja de 50)",
+      "precioUnidad": 99.65
+    },
+    "-Nqj3v5pdLBe_Av8qT6g": {
+      "idCategoria": 0,
+      "idProducto": 4,
+      "nombreProducto": "Aceite Oliva 1l (Caja 20)",
+      "precioUnidad": 109.25
+    },
+    "-Nqj3v5ycFXFNrN-0ewr": {
+      "idCategoria": 2,
+      "idProducto": 11,
+      "nombreProducto": "Mayonesa 350gr (Caja de 50)",
+      "precioUnidad": 124.45
+    },
+    "-Nqj3v5ycFXFNrN-0ews": {
+      "idCategoria": 1,
+      "idProducto": 8,
+      "nombreProducto": "Aceituna Manzanilla deshuesada 250 gr (Caja de 50)",
+      "precioUnidad": 141.35
+    },
+    "-Nqj3v60WSQ4xiPChlpn": {
+      "idCategoria": 1,
+      "idProducto": 7,
+      "nombreProducto": "Aceituna Manzanilla 250 gr (Caja de 50)",
+      "precioUnidad": 124.85
+    },
+    "-Nqj3v66FaKRhS9mTr2c": {
+      "idCategoria": 2,
+      "idProducto": 12,
+      "nombreProducto": "Mayonesa 1Kg (Caja de 30)",
+      "precioUnidad": 178.65
+    },
+    "-Nqj3v6EKaxddqOaB7nH": {
+      "idCategoria": 2,
+      "idProducto": 14,
+      "nombreProducto": "Salsa Gaucha 350gr (Caja de 50)",
+      "precioUnidad": 124.85
+    },
+    "-Nqj3v6WtFjVHU8BMpTQ": {
+      "idCategoria": 2,
+      "idProducto": 16,
+      "nombreProducto": "Salsa Barbacoa 500gr (Caja de 30)",
+      "precioUnidad": 67.5
+    },
+    "-Nqj3v6d0tab7nLt8jxv": {
+      "idCategoria": 0,
+      "idProducto": 2,
+      "nombreProducto": "Aceite Oliva Virgen Extra 700ml (Caja 30)",
+      "precioUnidad": 208.5
+    },
+    "-Nqj3v6d0tab7nLt8jxw": {
+      "idCategoria": 0,
+      "idProducto": 3,
+      "nombreProducto": "Aceite Oliva Virgen Extra 5l (Caja 6)",
+      "precioUnidad": 247.5
+    },
+    "-Nqj3v6l8z17erI0_4Y-": {
+      "idCategoria": 0,
+      "idProducto": 1,
+      "nombreProducto": "Aceite Oliva Virgen Extra 1l (Caja 20)",
+      "precioUnidad": 178.15
+    },
+    "-Nqj3v6mQv2VRpoIvORp": {
+      "idCategoria": 2,
+      "idProducto": 15,
+      "nombreProducto": "Salsa Alioli 350 gr (Caja de 50)",
+      "precioUnidad": 113.75
+    },
+    "-Nqj3v6vjOnFqgSkN7XA": {
+      "idCategoria": 1,
+      "idProducto": 9,
+      "nombreProducto": "Aceituna Negra 350gr (Caja de 50)",
+      "precioUnidad": 87.5
+    },
+    "-Nqj3v7S9HeZe3-cVMrT": {
+      "idCategoria": 1,
+      "idProducto": 5,
+      "nombreProducto": "Aceituna Gordal 340gr (Caja de 50)",
+      "precioUnidad": 180.75
+    },
+    "-Nqj3v7_B2nt_YMqVJwm": {
+      "idCategoria": 1,
+      "idProducto": 10,
+      "nombreProducto": "Aceituna Negra deshuesada 350gr (Caja de 50)",
+      "precioUnidad": 99.35
+    },
+    "-Nqj3v7bOEbIvE16ODoI": {
+      "idCategoria": 1,
+      "idProducto": 6,
+      "nombreProducto": "Aceituna Gordal deshuesada 350gr (Caja de 50)",
+      "precioUnidad": 205.45
+    }
+  }
+}

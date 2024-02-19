@@ -1,0 +1,10 @@
+<!ELEMENT club (personal)+>
+<!ELEMENT personal (persona)+>
+<!ELEMENT trabajador (nombre, apellido1, apellidos2?, telefono+, correo?)>
+<!ATTLIST persona id CDATA #REQUIRED genero (v|h) #REQUIRED>
+<!ELEMENT departamento (#PCDATA)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellidos (#PCDATA)>
+<!ELEMENT cargo (#PCDATA)>
+<!ELEMENT telefono-fijo (#PCDATA)>
+<!ELEMENT telefono-movil (#PCDATA)>

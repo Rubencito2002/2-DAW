@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recetas>
+    <receta>
+        <nombre>Tiramisú</nombre>
+        <ingredientes>
+            <ingrediente>Café</ingrediente>
+            <ingrediente>Queso mascarpone</ingrediente>
+            <ingrediente>Azúcar</ingrediente>
+            <ingrediente>Bizcochos</ingrediente>
+            <ingrediente>Cacao en polvo</ingrediente>
+        </ingredientes>
+        <preparacion>
+            Batir el queso mascarpone con azúcar...
+        </preparacion>
+    </receta>
+    <receta>
+        <nombre>Sopa de Tomate</nombre>
+        <ingredientes>
+            <ingrediente>Tomates</ingrediente>
+            <ingrediente>Cebolla</ingrediente>
+            <ingrediente>Ajo</ingrediente>
+            <ingrediente>Caldo de verduras</ingrediente>
+            <ingrediente>Albahaca</ingrediente>
+        </ingredientes>
+        <preparacion>
+            Sofreír la cebolla y el ajo, añadir los tomates y el caldo...
+        </preparacion>
+    </receta>
+</recetas>

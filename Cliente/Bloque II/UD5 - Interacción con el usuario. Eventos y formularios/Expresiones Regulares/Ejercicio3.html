@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EJERCICIO 3</title>
+  </head>
+  <body>
+    <h3>Ejercicio 3 - EXAMEN BLOQUE II - 06/02/2023</h3>
+    <form action="./destino/formularioProcesado.html" name="formulario">
+      <label>Marca: </label>
+      <input type="text" name="marca" />
+      <br />
+      <label>Modelo: </label>
+      <input type="text" name="modelo" />
+      <br />
+      <label>Fecha de matriculación: </label>
+      <input type="text" name="fechaMatriculacion" />
+      <br />
+      <label>Tipo de matrícula: </label>
+      <select name="tipoMatricula">
+        <option value="actual">Actual</option>
+        <option value="antigua">Antigua</option>
+        <option value="historica">Histórica</option>
+      </select>
+      <br />
+      <label>Matrícula: </label>
+      <input type="text" name="matricula" />
+      <br />
+      <label>Color: </label>
+      <input type="text" name="color" />
+      <br />
+      <input type="submit" name="submit" value="Procesar Formulario" />
+    </form>
+    <div id="salida"></div>
+    <script src="./js/ejercicio3.js"></script>
+  </body>
+</html>

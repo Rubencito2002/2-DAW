@@ -1,0 +1,20 @@
+{
+    "recetas": {
+        "receta": [
+            {
+            "nombre": "Tiramisú",
+            "ingredientes": {
+                "ingrediente": ["Café", "Queso mascarpone", "Azúcar", "Bizcochos", "Cacao en polvo"]
+                },
+            "preparacion": "Batir el queso mascarpone con azúcar..."
+            },
+            {
+                "nombre": "Sopa de Tomate",
+                "ingredientes": {
+                    "ingrediente": ["Tomates", "Cebolla", "Ajo", "Caldo de verduras", "Albahaca"]
+                    },
+                "preparacion": "Sofreír la cebolla y el ajo, añadir los tomates y el caldo..."
+            }
+        ]
+    }
+}

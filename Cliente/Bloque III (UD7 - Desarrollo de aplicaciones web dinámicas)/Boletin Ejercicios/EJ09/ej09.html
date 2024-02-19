@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      table {
+        border-collapse: collapse;
+        text-align: center;
+      }
+
+      td {
+        border: 1px solid black;
+        padding: 3px 5px;
+      }
+    </style>
+    <title>Ejercicio 09</title>
+  </head>
+  <body>
+    <h1>Actualizar un registro atacando a API Rest en Firebase usando Fetch</h1>
+    <div id="salida"></div>
+    <br />
+    <button id="recuperarDatos">Recuperar Datos</button>
+    <h3>Actualizar Registro</h3>
+    <form name="frmActualizaRegistro">
+      <label>ID (Firebase): </label><input type="text" name="idFirebase" /><br />
+      <label>Nuevo Apellidos: </label><input type="text" name="apellidos" /><br />
+      <input type="submit" value="Actualizar" />
+    </form>
+    <script src="./ej09.js"></script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+/* Estilo para el elemento recetas */
+recetas {
+    display: block;
+    margin: 20px;
+}
+
+/* Estilo para el elemento receta */
+receta {
+    display: block;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+/* Estilo para el elemento nombre dentro de receta */
+nombre {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Estilo para el elemento ingredientes dentro de receta */
+ingredientes {
+    margin-top: 10px;
+}
+
+/* Estilo para el elemento ingrediente dentro de ingredientes */
+ingrediente {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Estilo para el elemento preparacion dentro de receta */
+preparacion {
+    margin-top: 10px;
+}
+
+/* Estilo para el texto dentro de preparacion */
+preparacion {
+    white-space: pre-wrap;
+}

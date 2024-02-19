@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/practicaObligatoria.css" />
+    <title>Práctica Obligatoria</title>
+  </head>
+  <body>
+    <h1>Gestor Comercial</h1>
+    <div id="clientes" class="panel">
+      <h1>Clientes</h1>
+      <form id="frmComercial" name="frmComercial">
+        <label><h4>Comercial:</h4></label>
+        <select name="comerciales"></select>
+      </form>
+    </div>
+    <div id="controles" class="panel">
+      <h1>Controles</h1>
+      <form id="frmControles" name="frmControles">
+        <label><h4>Categoría:</h4></label>
+        <select name="categorias"></select>
+        <br />
+        <label><h4>Productos:</h4></label>
+        <select name="productos"></select>
+        <br />
+      </form>
+      <br /><br /><br />
+      <hr />
+      <br /><br /><br />
+      <button id="btnGestionCategorias" class="tecla" type="button">Gestión Categorías</button>
+      <button id="btnGestionProductos" class="tecla" type="button">Gestión Productos</button>
+      <button id="btnGestionComerciales" class="tecla" type="button">Gestión Comerciales</button>
+      <button id="btnGestionClientes" class="tecla" type="button">Gestión Clientes</button>
+    </div>
+    <div id="formularios" class="panel">
+      <h1>CRUD</h1>
+      <hr />
+      <!-- Formulario de Categoria -->
+      <form id="frmNuevaCategoria" name="frmNuevaCategoria" style="visibility: visible">
+        <label><h4>Nueva categoría:</h4></label>
+        <input type="text" id="txtNuevaCategoria" /><br /><br />
+        <input type="submit" value="Guardar" />
+      </form>
+      <form id="frmBorrarCategoria" name="frmBorrarCategoria" style="visibility: visible">
+        <label><h4>Categoría a borrar:</h4></label>
+        <select name="categoriasBorrar"></select><br /><br />
+        <input type="submit" value="Borrar" />
+      </form>
+      <form id="frmActualizarCategoria" name="frmActualizarCategoria" style="visibility: visible">
+        <label><h4>Actualizar categorías:</h4></label>`
+        <select name="categoriasActualizar"></select>
+        <input type="text" id="txtActualizarCategoria" /><br /><br />
+        <input type="submit" value="Actualizar" />
+      </form>
+      <!-- Formulario de Producto -->
+      <form id="frmNuevaProducto" name="frmNuevaProducto" style="visibility: visible">
+        <label><h4>Nuevo Producto:</h4></label>
+        <input type="text" id="txtNuevoProducto" /><br /><br />
+        <input type="submit" value="Guardar" />
+      </form>
+      <form id="frmBorrarProducto" name="frmBorrarProducto" style="visibility: visible">
+        <label><h4>Producto a borrar:</h4></label>
+        <input type="text" id="txtBorrarProducto" /><br /><br />
+        <input type="submit" value="Borrar" />
+      </form>
+      <form id="frmActualizarProducto" name="frmActualizarProducto" style="visibility: visible">
+        <label><h4>Actualizar producto:</h4></label>
+        <input type="text" id="txtActualizarProducto" /><br /><br />
+        <input type="submit" value="Borrar" />
+      </form>
+      <!-- Formulario de Comerciales -->
+      <form id="frmNuevaComerciales" name="frmNuevaComerciales" style="visibility: visible">
+        <label><h4>Nuevo Comercial:</h4></label>
+        <input type="text" id="txtNuevoComercial" /><br /><br />
+        <input type="submit" value="Guardar" />
+      </form>
+      <form id="frmBorrarComerciales" name="frmBorrarComerciales" style="visibility: visible">
+        <label><h4>Comerciales a borrar:</h4></label>
+        <select name="comercialesBorrar"></select><br /><br />
+        <input type="submit" value="Borrar" />
+      </form>
+      <form id="frmActualizarComerciales" name="frmActualizarComerciales" style="visibility: visible">
+        <label><h4>Actualizar comerciales:</h4></label>`
+        <select name="comercialesActualizar"></select>
+        <input type="text" id="txtActualizarComercial" /><br /><br />
+        <input type="submit" value="Actualizar" />
+      </form>
+      <!-- Formulario de Clientes -->
+      <form id="frmNuevaClientes" name="frmNuevaClientes" style="visibility: visible">
+        <label><h4>Nuevo Cliente:</h4></label>
+        <input type="text" id="txtNuevaCliente" /><br /><br />
+        <input type="submit" value="Guardar" />
+      </form>
+      <form id="frmBorrarClientes" name="frmBorrarClientes" style="visibility: visible">
+        <label><h4>Cliente a borrar:</h4></label>
+        <input type="text" id="txtBorrarCliente" /><br /><br />
+        <input type="submit" value="Borrar" />
+      </form>
+      <form id="frmActualizarClientes" name="frmActualizarClientes" style="visibility: visible">
+        <label><h4>Actualizar Cliente:</h4></label>
+        <input type="text" id="txtActualizarCliente" /><br /><br />
+        <input type="submit" value="Borrar" />
+      </form>
+    </div>
+    <script src="./js/clases.js"></script>
+    <script src="./js/practicaObligatoria.js"></script>
+  </body>
+</html>

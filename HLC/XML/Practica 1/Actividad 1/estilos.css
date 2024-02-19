@@ -1,0 +1,30 @@
+empresa {
+    display: block;
+    margin: 20px;
+}
+
+trabajador {
+    display: block;
+    border: 1px solid #000;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+departamento, cargo, telefono-movil, telefono-fijo {
+    display: block;
+    margin-bottom: 5px;
+}
+
+cargo, telefono-movil, telefono-fijo {
+    font-style: italic;
+}
+
+telefono-fijo {
+    color: #666;
+}
+
+departamento{
+    text-align: center;
+    background-color: black;
+    color: white;
+}

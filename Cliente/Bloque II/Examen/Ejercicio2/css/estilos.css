@@ -1,0 +1,85 @@
+* *:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1024px;
+  margin: 1em auto;
+  padding: 0 0.5em;
+}
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+  padding: 0.5em 1em;
+}
+
+pre {
+  max-width: 100%;
+  overflow: auto;
+  font-size: 0.9em;
+  border: 1px dotted #000000;
+}
+
+.header,
+.footer {
+  text-align: center;
+  background-color: #71a9d6;
+}
+
+.box,
+.contenedor {
+  vertical-align: top;
+  padding: 0 0.2%;
+  border: 1px solid #71a9d6;
+}
+
+.box {
+  display: block;
+}
+
+.contenedor {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  width: 49%;
+}
+
+img {
+  width: 100px;
+  height: 150px;
+  border: thin blue solid;
+}
+
+#origen img {
+  margin-bottom: 1em;
+}
+
+.capasDestino {
+  border: 1px solid maroon;
+  background-color: #a8f1e9;
+  margin-bottom: 1em;
+}
+
+#controls div {
+  margin-bottom: 0.5em;
+}
+
+button {
+  margin-top: 10px;
+}
+
+#button-restore {
+  display: none;
+}
+
+.done input[type="checkbox"],
+.done #button-execute {
+  display: none;
+}
+
+#button-restore {
+  display: inline;
+}

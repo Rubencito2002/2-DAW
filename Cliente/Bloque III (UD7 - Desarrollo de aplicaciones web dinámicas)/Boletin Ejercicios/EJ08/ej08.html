@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      table {
+        border-collapse: collapse;
+        text-align: center;
+      }
+
+      td {
+        border: 1px solid black;
+        padding: 3px 5px;
+      }
+
+      button {
+        margin: 3px;
+      }
+    </style>
+    <title>Ejercicio 08</title>
+  </head>
+  <body>
+    <h1>Insertar y recuperar datos atacando a API Rest en Firebase usando Fetch</h1>
+    <div id="salida"></div>
+    <br />
+    <button id="recuperarDatos">Recuperar Datos</button>
+    <h3>Nuevo Alumno</h3>
+    <form name="formNuevoAlumno">
+      <label>Id: </label><input type="number" name="id" /> <br /><label>Apellidos: </label
+      ><input type="text" name="apellidos" /> <br /><label>Nombre: </label
+      ><input type="text" name="nombre" /> <br /><label>Edad: </label
+      ><input type="number" name="edad" /><br />
+      <input type="submit" value="Insertar" />
+    </form>
+    <script src="./ej08.js"></script>
+  </body>
+</html>

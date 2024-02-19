@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="recetas.css"?>
+<!DOCTYPE recetas [
+    <!ELEMENT recetas (receta+)>
+    <!ELEMENT receta (nombre, ingredientes, preparacion)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT ingredientes (ingrediente+)>
+    <!ELEMENT ingrediente (#PCDATA)>
+    <!ELEMENT preparacion (#PCDATA)>
+]>
+<recetas>
+    <receta>
+        <nombre>Tiramisú</nombre>
+        <ingredientes>
+            <ingrediente>Café</ingrediente>
+            <ingrediente>Queso mascarpone</ingrediente>
+            <ingrediente>Azúcar</ingrediente>
+            <ingrediente>Bizcochos</ingrediente>
+            <ingrediente>Cacao en polvo</ingrediente>
+        </ingredientes>
+        <preparacion>
+            Batir el queso mascarpone con azúcar...
+        </preparacion>
+    </receta>
+    <receta>
+        <nombre>Sopa de Tomate</nombre>
+        <ingredientes>
+            <ingrediente>Tomates</ingrediente>
+            <ingrediente>Cebolla</ingrediente>
+            <ingrediente>Ajo</ingrediente>
+            <ingrediente>Caldo de verduras</ingrediente>
+            <ingrediente>Albahaca</ingrediente>
+        </ingredientes>
+        <preparacion>
+            Sofreír la cebolla y el ajo, añadir los tomates y el caldo...
+        </preparacion>
+    </receta>
+</recetas>

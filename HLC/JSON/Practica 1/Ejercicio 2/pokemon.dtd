@@ -1,0 +1,11 @@
+<!ELEMENT pokemon (nombre, ataques, tipos, peso, imagenes)>
+<!ELEMENT nombrePokemon (#PCDATA)>
+<!ELEMENT ataques (ataque+)>
+<!ELEMENT ataque (nombre)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT tipos (tipo+)>
+<!ELEMENT tipo (nombre)>
+<!ELEMENT peso (#PCDATA)>
+<!ELEMENT imagenes (imagen_delantera, imagen_trasera)>
+<!ELEMENT imagen_delantera (#PCDATA)>
+<!ELEMENT imagen_trasera (#PCDATA)>

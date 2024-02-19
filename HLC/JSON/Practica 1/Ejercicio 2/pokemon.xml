@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pokemon SYSTEM "pokemon.dtd">
+<pokemon>
+    <nombrePokemon> bulbasaur </nombrePokemon>
+    <ataques> 
+        <ataque>
+            <nombre> razor-wind </nombre>
+        </ataque>
+        <ataque>
+            <nombre> swords-dance </nombre>
+        </ataque>
+        <ataque>
+            <nombre> bind </nombre>
+        </ataque>
+        <ataque>
+            <nombre> vine-whip </nombre>
+        </ataque>
+        <ataque>
+            <nombre> headbutt </nombre>
+        </ataque>
+        <ataque>
+            <nombre> tackle </nombre>
+        </ataque>
+    </ataques>
+    <tipos>
+        <tipo>
+            <nombre> grass </nombre>
+        </tipo>
+        <tipo>
+            <nombre> poison </nombre>
+        </tipo>
+    </tipos>
+    <peso> 69 </peso>
+    <imagenes>
+        <imagen_delantera> https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png </imagen_delantera>
+        <imagen_trasera> https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png </imagen_trasera>
+    </imagenes>
+</pokemon>
