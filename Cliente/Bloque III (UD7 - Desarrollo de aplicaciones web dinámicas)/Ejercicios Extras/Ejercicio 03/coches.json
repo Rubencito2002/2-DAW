@@ -1,0 +1,40 @@
+{
+  "coches": [
+    {
+      "marca": "Renault",
+      "modelo": "Megane 1.5 dCi",
+      "matricula": "0123ABC",
+      "kilometros": 135000
+    },
+    {
+      "marca": "Peugeot",
+      "modelo": "5008 1.6 Style",
+      "matricula": "9876CBA",
+      "kilometros": 221000
+    },
+    {
+      "marca": "Seat",
+      "modelo": "Ateca 1.1",
+      "matricula": "9753ZYQ",
+      "kilometros": 21000
+    },
+    {
+      "marca": "Skoda",
+      "modelo": "Karoq Sportline",
+      "matricula": "8642MBA",
+      "kilometros": 16500
+    },
+    {
+      "marca": "Fiat",
+      "modelo": "500X",
+      "matricula": "9999LSD",
+      "kilometros": 4700
+    },
+    {
+      "marca": "Volkswagen",
+      "modelo": "Tiguan 2.0 TDi",
+      "matricula": "0000MSN",
+      "kilometros": 310000
+    }
+  ]
+}

@@ -3,7 +3,7 @@ body{
   padding: 0;
 }
 
-.panelClientes {
+.panel {
   border: medium blue solid;
   width: 450px;
   height: 600px;

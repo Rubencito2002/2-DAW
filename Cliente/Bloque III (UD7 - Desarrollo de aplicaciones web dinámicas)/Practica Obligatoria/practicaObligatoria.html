@@ -8,98 +8,120 @@
     <title>Práctica Obligatoria</title>
   </head>
   <body>
-    <h1>Gestor Comercial</h1>
-    <div id="clientes" class="panel">
+    
+    <header>
+      <h1>Gestor Comercial</h1>
+      <nav>
+        <ul>
+          <li><a href="#" onclick="mostrarForm('categorias')">Gestión Categorías</a></li>
+          <li><a href="#" onclick="mostrarForm('productos')">Gestión Productos</a></li>
+          <li><a href="#" onclick="mostrarForm('comerciales')">Gestión Comerciales</a></li>
+          <li><a href="#" onclick="mostrarForm('clientes')">Gestión Clientes</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div id="clientes" class="panelClientes">
       <h1>Clientes</h1>
+      <hr />
       <form id="frmComercial" name="frmComercial">
         <label><h4>Comercial:</h4></label>
         <select name="comerciales"></select>
       </form>
     </div>
-    <div id="controles" class="panel">
-      <h1>Controles</h1>
-      <form id="frmControles" name="frmControles">
-        <label><h4>Categoría:</h4></label>
-        <select name="categorias"></select>
-        <br />
-        <label><h4>Productos:</h4></label>
-        <select name="productos"></select>
-        <br />
-      </form>
-      <br /><br /><br />
-      <hr />
-      <br /><br /><br />
-      <button id="btnGestionCategorias" class="tecla" type="button">Gestión Categorías</button>
-      <button id="btnGestionProductos" class="tecla" type="button">Gestión Productos</button>
-      <button id="btnGestionComerciales" class="tecla" type="button">Gestión Comerciales</button>
-      <button id="btnGestionClientes" class="tecla" type="button">Gestión Clientes</button>
-    </div>
-    <div id="formularios" class="panel">
+    <div id="formularios" class="panelCRUD">
       <h1>CRUD</h1>
       <hr />
       <!-- Formulario de Categoria -->
       <form id="frmNuevaCategoria" name="frmNuevaCategoria" style="visibility: visible">
         <label><h4>Nueva categoría:</h4></label>
+        <label>Nombre Categoria:</label>
         <input type="text" id="txtNuevaCategoria" /><br /><br />
         <input type="submit" value="Guardar" />
       </form>
       <form id="frmBorrarCategoria" name="frmBorrarCategoria" style="visibility: visible">
         <label><h4>Categoría a borrar:</h4></label>
+        <label>Seleccione Categoria: </label>
         <select name="categoriasBorrar"></select><br /><br />
         <input type="submit" value="Borrar" />
       </form>
       <form id="frmActualizarCategoria" name="frmActualizarCategoria" style="visibility: visible">
-        <label><h4>Actualizar categorías:</h4></label>`
-        <select name="categoriasActualizar"></select>
+        <label><h4>Actualizar categorías:</h4></label>
+        <label>Seleccione Categoria: </label>
+        <select name="categoriasActualizar"></select><br />
+        <label>Nueva Categoria: </label>
         <input type="text" id="txtActualizarCategoria" /><br /><br />
         <input type="submit" value="Actualizar" />
       </form>
       <!-- Formulario de Producto -->
       <form id="frmNuevaProducto" name="frmNuevaProducto" style="visibility: visible">
         <label><h4>Nuevo Producto:</h4></label>
-        <input type="text" id="txtNuevoProducto" /><br /><br />
+        <label>Seleccionar Categoria:</label>
+        <select name="categoriasProductosAñadir"></select><br />
+        <label>Nombre Producto:</label>
+        <input type="text" id="txtNuevoProducto" /><br />
+        <label>IdProducto: </label>
+        <input type="number" id="numberIdProducto"><br />
+        <label>Precio: </label>
+        <input type="number" id="precioUnitario"><br /><br />
         <input type="submit" value="Guardar" />
       </form>
-      <form id="frmBorrarProducto" name="frmBorrarProducto" style="visibility: visible">
-        <label><h4>Producto a borrar:</h4></label>
-        <input type="text" id="txtBorrarProducto" /><br /><br />
-        <input type="submit" value="Borrar" />
-      </form>
-      <form id="frmActualizarProducto" name="frmActualizarProducto" style="visibility: visible">
-        <label><h4>Actualizar producto:</h4></label>
+      <form id="frmProducto" name="frmProducto" style="visibility: visible">
+        <label><h4>Producto a Borrar/Actualizar:</h4></label>
+        <label>Seleccionar Categoria:</label>
+        <select name="categorias"></select><br />
+        <label>Seleccione Producto:</label>
+        <select name="productos"></select><br />
+        <label>Nombre producto actualizar:</label>
         <input type="text" id="txtActualizarProducto" /><br /><br />
-        <input type="submit" value="Borrar" />
+        <input type="submit" id="btnBorrarProducto" value="Borrar" />
+        <input type="submit" id="btnActualizarProducto" value="Actualizar" />
       </form>
       <!-- Formulario de Comerciales -->
       <form id="frmNuevaComerciales" name="frmNuevaComerciales" style="visibility: visible">
         <label><h4>Nuevo Comercial:</h4></label>
+        <label>Nombre Comercial:</label>
         <input type="text" id="txtNuevoComercial" /><br /><br />
         <input type="submit" value="Guardar" />
       </form>
       <form id="frmBorrarComerciales" name="frmBorrarComerciales" style="visibility: visible">
         <label><h4>Comerciales a borrar:</h4></label>
+        <label>Seleccione Comercial:</label>
         <select name="comercialesBorrar"></select><br /><br />
         <input type="submit" value="Borrar" />
       </form>
       <form id="frmActualizarComerciales" name="frmActualizarComerciales" style="visibility: visible">
-        <label><h4>Actualizar comerciales:</h4></label>`
-        <select name="comercialesActualizar"></select>
+        <label><h4>Actualizar comerciales:</h4></label>
+        <label>Seleccione Comercial:</label>
+        <select name="comercialesActualizar"></select><br />
+        <label>Nuevo Comercial:</label>
         <input type="text" id="txtActualizarComercial" /><br /><br />
         <input type="submit" value="Actualizar" />
       </form>
       <!-- Formulario de Clientes -->
       <form id="frmNuevaClientes" name="frmNuevaClientes" style="visibility: visible">
         <label><h4>Nuevo Cliente:</h4></label>
+        <label>Seleccione Comercial:</label>
+        <select name="comercialesCliente"></select><br />
+        <label>Nombre Cliente:</label>
         <input type="text" id="txtNuevaCliente" /><br /><br />
         <input type="submit" value="Guardar" />
       </form>
       <form id="frmBorrarClientes" name="frmBorrarClientes" style="visibility: visible">
         <label><h4>Cliente a borrar:</h4></label>
-        <input type="text" id="txtBorrarCliente" /><br /><br />
+        <label>Seleccione Comercial:</label>
+        <select name="comercialesClienteBorrar"></select><br />
+        <label>Seleccione Cliente:</label>
+        <select name="clienteBorrar"></select><br /><br />
         <input type="submit" value="Borrar" />
       </form>
       <form id="frmActualizarClientes" name="frmActualizarClientes" style="visibility: visible">
         <label><h4>Actualizar Cliente:</h4></label>
+        <label>Seleccione Comercial:</label>
+        <select name="comercialesClienteActualizar"></select><br />
+        <label>Seleccione Cliente:</label>
+        <select name="clienteActualizar"></select><br />
+        <label>Nombre Cliente: </label>
         <input type="text" id="txtActualizarCliente" /><br /><br />
         <input type="submit" value="Borrar" />
       </form>

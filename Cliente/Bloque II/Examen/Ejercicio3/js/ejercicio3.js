@@ -57,11 +57,11 @@ function validarFormulario(){
         camposVacios.push('Color');
     }
 
-    const precioRegex = /^\d{2},\d{2}$/;
-    const horaRegex = /^\d{2}:\d{2}$/;
-    const fechaRegex = /^\d{2}-\d{2}-\d{4}$/;
-    const direccionIpRegex = /^\d{3}.\d{3}.\d{3}.\d{3}/;
-    const colorRegex = /^[A-Za-z]\d+$/;
+    const precioRegex =  /^\d+(\.\d{1,2})?€$/ // /^\d{2},\d{2}$/; // Este lo tenia bien pero lo he mejorado para que este perfecto.
+    const horaRegex = /^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$/; // /^\d{2}:\d{2}$/; //Esto es lo que yo tenia mal.
+    const fechaRegex = /^\d{2}\/\d{2}\/\d{4}$/ // /^\d{2}-\d{2}-\d{4}$/; // Este tambien lo tenia bien.
+    const direccionIpRegex = /^(\d{1,3}\.){3}\d{1,3}$/ // /^\d{3}.\d{3}.\d{3}.\d{3}/; // Este tambien lo tenia mal.
+    const colorRegex = /^#[0-9A-Fa-f]{6}$/; // /^[A-Za-z]\d+$/; // Este tambien lo tenia mal.
 
     if(!precioRegex.test(precio)){
         camposConErrores.push('Precio');

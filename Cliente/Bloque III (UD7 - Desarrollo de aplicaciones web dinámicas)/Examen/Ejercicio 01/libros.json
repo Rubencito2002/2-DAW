@@ -1,0 +1,34 @@
+{
+  "libros": {
+    "-NO50LhJm8O00q1cAAuu": {
+      "titulo": "Don Quijote de la Mancha",
+      "autor": "Miguel de Cervantes",
+      "editorial": "Real Academia Española",
+      "paginas": 1376
+    },
+    "-NO50_Dp2IOuhJX4t2xL": {
+      "titulo": "La Celestina",
+      "autor": "Fernando de Rojas",
+      "editorial": "Cátedra",
+      "paginas": 368
+    },
+    "-NO50yKgi9iVXNrdo510": {
+      "titulo": "El Conde Lucanor",
+      "autor": "Don Juan Manuel",
+      "editorial": "S.M.",
+      "paginas": 128
+    },
+    "-NO514EEYamndOxrNyqe": {
+      "titulo": "Lazarillo de Tormes",
+      "autor": "Anónimo",
+      "editorial": "Austral",
+      "paginas": 150
+    },
+    "-NO518hBEAp-OpkpNH3m": {
+      "titulo": "Bodas de sangre",
+      "autor": "Federico García Lorca",
+      "editorial": "Vicens Vives",
+      "paginas": 176
+    }
+  }
+}

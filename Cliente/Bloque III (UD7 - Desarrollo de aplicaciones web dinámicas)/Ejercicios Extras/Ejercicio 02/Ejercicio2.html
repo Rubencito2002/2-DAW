@@ -1,0 +1,61 @@
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 02</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        text-align: center;
+      }
+      td {
+        border: 1px solid black;
+        padding: 3px 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Ejercicio 02 - Examen 20/02/2023</h1>
+
+    <div id="salida"></div>
+    <hr />
+    <form id="formularioConsulta">
+      <h3>Formulario Consulta</h3>
+      <label>Kilometros Máximos: </label>
+      <input type="number" name="kilometros" min="0" value="500000" /><br />
+      <input type="submit" value="Listar Coches" />
+    </form>
+    <hr />
+    <form id="formularioModificar">
+      <h3>Formulario Actualización</h3>
+      <label>Matrícula: </label>
+      <input type="text" name="matricula" /><br />
+      <label>Kilómetros nuevos: </label>
+      <input type="number" name="kilometros" min="0" value="0" /><br />
+      <input type="submit" value="Actualizar" />
+    </form>
+    <hr />
+    <form id="formularioEliminar">
+      <h3>Formulario Eliminación</h3>
+      <label>Matrícula: </label>
+      <input type="text" name="matricula" /><br />
+      <input type="submit" value="Eliminar" />
+    </form>
+    <hr />
+    <form id="formularioInsercion">
+      <h3>Formulario Inserción</h3>
+      <label>Marca: </label>
+      <input type="text" name="marca" /><br />
+      <label>Modelo: </label>
+      <input type="text" name="modelo" /><br />
+      <label>Matrícula: </label>
+      <input type="text" name="matricula" /><br />
+      <label>Kilómetros: </label>
+      <input type="number" name="kilometros" /><br />
+      <input type="submit" value="Insertar" />
+    </form>
+    <hr />
+
+    <script src="./Ejercicio2.js"></script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+{
+  "partidos": {
+    "-NO50LhJm8O00q1cAAuu": {
+      "equipoLocal": "Sevilla FC",
+      "equipoVisitante": "FC Barcelona",
+      "golesLocal": 2,
+      "golesVisitante": 0
+    },
+    "-NO50_Dp2IOuhJX4t2xL": {
+      "equipoLocal": "Real Betis",
+      "equipoVisitante": "At. Madrid",
+      "golesLocal": 0,
+      "golesVisitante": 0
+    },
+    "-NO50yKgi9iVXNrdo510": {
+      "equipoLocal": "Valencia",
+      "equipoVisitante": "Rayo Vallecano",
+      "golesLocal": 0,
+      "golesVisitante": 3
+    },
+    "-NO514EEYamndOxrNyqe": {
+      "equipoLocal": "Real Madrid",
+      "equipoVisitante": "Real Sociedad",
+      "golesLocal": 2,
+      "golesVisitante": 1
+    },
+    "-NO518hBEAp-OpkpNH3m": {
+      "equipoLocal": "Osasuna",
+      "equipoVisitante": "RCD Espanyol",
+      "golesLocal": 1,
+      "golesVisitante": 1
+    }
+  }
+}

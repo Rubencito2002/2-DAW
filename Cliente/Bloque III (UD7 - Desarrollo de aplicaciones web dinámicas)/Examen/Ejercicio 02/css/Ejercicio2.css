@@ -1,9 +1,4 @@
-body{
-  margin: 0;
-  padding: 0;
-}
-
-.panelClientes {
+.panel {
   border: medium blue solid;
   width: 450px;
   height: 600px;
@@ -11,50 +6,6 @@ body{
   padding: 5px;
   float: left;
   text-align: center;
-}
-
-.panelCRUD {
-  border: medium blue solid;
-  width: 50%;
-  height: 100%;
-  margin: 10px;
-  padding: 5px;
-  float: left;
-}
-
-.panelCRUD h1{
-  text-align: center;
-}
-
-.panelCRUD h4{
-  text-align: center;
-  text-decoration: underline;
-}
-
-.panelCRUD select{
-  width: 50%;
-  padding: 4px;
-  margin-bottom: 5px;
-  font-size: 17px;
-}
-
-.panelCRUD input{
-  width: 50%;
-  padding: 4px;
-  margin-bottom: 5px;
-  font-size: 17px;
-}
-
-.panelCRUD input[type="submit"]{
-  width: 25%;
-  padding: 5px;
-  background-color: blue;
-  color: white;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-  margin-left: 10px;
-  box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
 }
 
 .cliente {
@@ -95,6 +46,14 @@ body{
   background-color: lightskyblue;
 }
 
+select {
+  font-size: 17px;
+}
+
+input {
+  font-size: 17px;
+}
+
 table {
   border-collapse: collapse;
   table-layout: fixed;
@@ -131,39 +90,4 @@ th {
 .boton {
   background-color: lightskyblue;
   margin-bottom: 5px;
-}´
-
-h1{
-  margin: 0;
-}
-
-header{
-  background-color: #333;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
-
-nav ul{
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
-nav li{
-  display: inline-block;
-  margin-right: 20px;
-}
-
-nav a{
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  font-size: 16px;
-  transition: color 0.3s ease;
-}
-
-nav a:hover{
-  color: #ffd700;
 }
